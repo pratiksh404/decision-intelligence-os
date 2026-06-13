@@ -1,0 +1,753 @@
+{
+  "generated_at": "2026-06-13T22:43:41.116514",
+  "total_edges": 67,
+  "edge_type_counts": {
+    "LEADS_TO": 7,
+    "DEPENDS_ON": 3,
+    "RELATES_TO": 30,
+    "GENERATES": 4,
+    "IMPROVES": 1,
+    "ASSUMES": 4,
+    "INFLUENCES": 3,
+    "VALIDATES": 15
+  },
+  "edges": [
+    {
+      "id": "E-OPP-2026-002-LEADS_TO-TRD-2026-002",
+      "source": "OPP-2026-002",
+      "target": "TRD-2026-002",
+      "type": "LEADS_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_trends",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-OPP-2026-001-LEADS_TO-TRD-2026-001",
+      "source": "OPP-2026-001",
+      "target": "TRD-2026-001",
+      "type": "LEADS_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_trends",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-OPP-2026-001-DEPENDS_ON-ASM-2026-001",
+      "source": "OPP-2026-001",
+      "target": "ASM-2026-001",
+      "type": "DEPENDS_ON",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "depends_on",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-OPP-2026-001-DEPENDS_ON-ASM-2026-002",
+      "source": "OPP-2026-001",
+      "target": "ASM-2026-002",
+      "type": "DEPENDS_ON",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "depends_on",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-OPP-2026-001-DEPENDS_ON-ASM-2026-003",
+      "source": "OPP-2026-001",
+      "target": "ASM-2026-003",
+      "type": "DEPENDS_ON",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "depends_on",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-OPP-2026-001-RELATES_TO-CMP-001",
+      "source": "OPP-2026-001",
+      "target": "CMP-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_competitors",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SIG-2026-003-LEADS_TO-TRD-2026-002",
+      "source": "SIG-2026-003",
+      "target": "TRD-2026-002",
+      "type": "LEADS_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_trends",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SIG-2026-001-LEADS_TO-TRD-2026-001",
+      "source": "SIG-2026-001",
+      "target": "TRD-2026-001",
+      "type": "LEADS_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_trends",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SIG-2026-002-LEADS_TO-TRD-2026-001",
+      "source": "SIG-2026-002",
+      "target": "TRD-2026-001",
+      "type": "LEADS_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_trends",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SIG-2026-002-RELATES_TO-CMP-001",
+      "source": "SIG-2026-002",
+      "target": "CMP-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_competitors",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-TRD-2026-001-LEADS_TO-OPP-2026-001",
+      "source": "TRD-2026-001",
+      "target": "OPP-2026-001",
+      "type": "LEADS_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "leads_to",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-TRD-2026-002-LEADS_TO-OPP-2026-002",
+      "source": "TRD-2026-002",
+      "target": "OPP-2026-002",
+      "type": "LEADS_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "leads_to",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-CMP-001-RELATES_TO-OPP-2026-001",
+      "source": "CMP-001",
+      "target": "OPP-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_opportunities",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-INI-2026-001-GENERATES-RSK-2026-001",
+      "source": "INI-2026-001",
+      "target": "RSK-2026-001",
+      "type": "GENERATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "generates",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-INI-2026-001-RELATES_TO-DEC-2026-001",
+      "source": "INI-2026-001",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_decision",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-008-RELATES_TO-MMD-001",
+      "source": "MMD-008",
+      "target": "MMD-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-008-RELATES_TO-MMD-007",
+      "source": "MMD-008",
+      "target": "MMD-007",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-001-RELATES_TO-MMD-007",
+      "source": "MMD-001",
+      "target": "MMD-007",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-001-RELATES_TO-MMD-008",
+      "source": "MMD-001",
+      "target": "MMD-008",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-006-RELATES_TO-MMD-003",
+      "source": "MMD-006",
+      "target": "MMD-003",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-006-RELATES_TO-MMD-005",
+      "source": "MMD-006",
+      "target": "MMD-005",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-006-RELATES_TO-MMD-004",
+      "source": "MMD-006",
+      "target": "MMD-004",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-005-RELATES_TO-MMD-006",
+      "source": "MMD-005",
+      "target": "MMD-006",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-005-RELATES_TO-MMD-001",
+      "source": "MMD-005",
+      "target": "MMD-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-007-RELATES_TO-MMD-001",
+      "source": "MMD-007",
+      "target": "MMD-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-007-RELATES_TO-MMD-008",
+      "source": "MMD-007",
+      "target": "MMD-008",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-002-RELATES_TO-MMD-004",
+      "source": "MMD-002",
+      "target": "MMD-004",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-002-RELATES_TO-MMD-007",
+      "source": "MMD-002",
+      "target": "MMD-007",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-004-RELATES_TO-MMD-003",
+      "source": "MMD-004",
+      "target": "MMD-003",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-004-RELATES_TO-MMD-002",
+      "source": "MMD-004",
+      "target": "MMD-002",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-003-RELATES_TO-MMD-004",
+      "source": "MMD-003",
+      "target": "MMD-004",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-MMD-003-RELATES_TO-MMD-006",
+      "source": "MMD-003",
+      "target": "MMD-006",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "complementary_models",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-OUT-2026-001-GENERATES-LSN-2026-001",
+      "source": "OUT-2026-001",
+      "target": "LSN-2026-001",
+      "type": "GENERATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "generates",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-OUT-2026-001-RELATES_TO-DEC-2026-001",
+      "source": "OUT-2026-001",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_decision",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-LSN-2026-001-RELATES_TO-DEC-2026-001",
+      "source": "LSN-2026-001",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_decision",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-LSN-2026-001-IMPROVES-MMD-001",
+      "source": "LSN-2026-001",
+      "target": "MMD-001",
+      "type": "IMPROVES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "mental_model_updated",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-DEC-2026-001-ASSUMES-ASM-2026-001",
+      "source": "DEC-2026-001",
+      "target": "ASM-2026-001",
+      "type": "ASSUMES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumes",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-DEC-2026-001-ASSUMES-ASM-2026-002",
+      "source": "DEC-2026-001",
+      "target": "ASM-2026-002",
+      "type": "ASSUMES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumes",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-DEC-2026-001-ASSUMES-ASM-2026-003",
+      "source": "DEC-2026-001",
+      "target": "ASM-2026-003",
+      "type": "ASSUMES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumes",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-DEC-2026-001-GENERATES-INI-2026-001",
+      "source": "DEC-2026-001",
+      "target": "INI-2026-001",
+      "type": "GENERATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "generates",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-DEC-2026-001-GENERATES-FRC-2026-001",
+      "source": "DEC-2026-001",
+      "target": "FRC-2026-001",
+      "type": "GENERATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "generates",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-DEC-2026-001-RELATES_TO-OPP-2026-001",
+      "source": "DEC-2026-001",
+      "target": "OPP-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_opportunity",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-DEC-2026-001-INFLUENCES-MMD-001",
+      "source": "DEC-2026-001",
+      "target": "MMD-001",
+      "type": "INFLUENCES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "mental_models_applied",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-DEC-2026-001-INFLUENCES-MMD-003",
+      "source": "DEC-2026-001",
+      "target": "MMD-003",
+      "type": "INFLUENCES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "mental_models_applied",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-ASM-2026-003-INFLUENCES-MMD-004",
+      "source": "ASM-2026-003",
+      "target": "MMD-004",
+      "type": "INFLUENCES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "mental_models_applied",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-005-RELATES_TO-DEC-2026-001",
+      "source": "SCE-2026-005",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "parent_decision",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-005-VALIDATES-ASM-2026-001",
+      "source": "SCE-2026-005",
+      "target": "ASM-2026-001",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-005-VALIDATES-ASM-2026-002",
+      "source": "SCE-2026-005",
+      "target": "ASM-2026-002",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-005-VALIDATES-ASM-2026-003",
+      "source": "SCE-2026-005",
+      "target": "ASM-2026-003",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-002-RELATES_TO-DEC-2026-001",
+      "source": "SCE-2026-002",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "parent_decision",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-002-VALIDATES-ASM-2026-001",
+      "source": "SCE-2026-002",
+      "target": "ASM-2026-001",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-002-VALIDATES-ASM-2026-002",
+      "source": "SCE-2026-002",
+      "target": "ASM-2026-002",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-002-VALIDATES-ASM-2026-003",
+      "source": "SCE-2026-002",
+      "target": "ASM-2026-003",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-003-RELATES_TO-DEC-2026-001",
+      "source": "SCE-2026-003",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "parent_decision",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-003-VALIDATES-ASM-2026-001",
+      "source": "SCE-2026-003",
+      "target": "ASM-2026-001",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-003-VALIDATES-ASM-2026-002",
+      "source": "SCE-2026-003",
+      "target": "ASM-2026-002",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-003-VALIDATES-ASM-2026-003",
+      "source": "SCE-2026-003",
+      "target": "ASM-2026-003",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-001-RELATES_TO-DEC-2026-001",
+      "source": "SCE-2026-001",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "parent_decision",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-001-VALIDATES-ASM-2026-001",
+      "source": "SCE-2026-001",
+      "target": "ASM-2026-001",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-001-VALIDATES-ASM-2026-002",
+      "source": "SCE-2026-001",
+      "target": "ASM-2026-002",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-001-VALIDATES-ASM-2026-003",
+      "source": "SCE-2026-001",
+      "target": "ASM-2026-003",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-004-RELATES_TO-DEC-2026-001",
+      "source": "SCE-2026-004",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "parent_decision",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-004-VALIDATES-ASM-2026-001",
+      "source": "SCE-2026-004",
+      "target": "ASM-2026-001",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-004-VALIDATES-ASM-2026-002",
+      "source": "SCE-2026-004",
+      "target": "ASM-2026-002",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-SCE-2026-004-VALIDATES-ASM-2026-003",
+      "source": "SCE-2026-004",
+      "target": "ASM-2026-003",
+      "type": "VALIDATES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumptions_tested",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-FRC-2026-001-ASSUMES-ASM-2026-003",
+      "source": "FRC-2026-001",
+      "target": "ASM-2026-003",
+      "type": "ASSUMES",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "assumes",
+        "validated": true
+      }
+    },
+    {
+      "id": "E-FRC-2026-001-RELATES_TO-DEC-2026-001",
+      "source": "FRC-2026-001",
+      "target": "DEC-2026-001",
+      "type": "RELATES_TO",
+      "properties": {},
+      "metadata": {
+        "extracted_from_field": "related_decision",
+        "validated": true
+      }
+    }
+  ]
+}

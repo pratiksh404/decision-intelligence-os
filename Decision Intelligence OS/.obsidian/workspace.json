@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06-meta-intelligence/dashboards/ceo-cockpit.md",
+                "file": "01-intelligence/competitors/CMP-001 — securecorp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ceo-cockpit"
+              "title": "CMP-001 — securecorp"
             }
           }
         ]
@@ -196,8 +196,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "9d1c13986953aa99",
+  "active": "92f2d803873af6dc",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2026-06-13 23.03.14.excalidraw.md",
+    "01-intelligence/competitors/CMP-001 — securecorp.md",
+    "Excalidraw",
+    "06-meta-intelligence/dashboards/ceo-cockpit.md",
     "06-meta-intelligence/ceo-user-manual.md",
     "02-decisions/scenarios/SCE-2026-010 — dec-2026-001-black-swan-systemic-cryptographical-breach.md",
     "02-decisions/scenarios/SCE-2026-009 — dec-2026-001-stretch-case-uncapped-enterprise-demand.md",
@@ -224,16 +228,12 @@
     "02-decisions/assumptions/ASM-2026-003 — competitive-moat-via-switching-costs.md",
     "02-decisions/assumptions/ASM-2026-002 — zero-knowledge-performance-overhead-is-acceptable.md",
     "02-decisions/assumptions/ASM-2026-001 — enterprise-willingness-to-pay-for-privacy.md",
-    "01-intelligence/opportunities/OPP-2026-002 — enterprise-privacy-gateway.md",
-    "01-intelligence/opportunities/OPP-2026-001 — zero-knowledge-analytics.md",
-    "01-intelligence/competitors/CMP-001 — securecorp.md",
     "06-meta-intelligence/graph/diagnostics/diagnostics.json",
     "06-meta-intelligence/graph/diagnostics",
     "06-meta-intelligence/graph/exports/nodes.json",
     "06-meta-intelligence/graph/exports/graph-export.json",
     "06-meta-intelligence/graph/exports/edges.json",
     "06-meta-intelligence/graph/exports",
-    "06-meta-intelligence/graph/entity-registry.json",
     "Untitled.canvas"
   ]
 }

@@ -1,0 +1,264 @@
+{
+  "query_entity": "DEC-2026-001",
+  "query_type": "decision",
+  "query_label": "Build Zero-Knowledge Analytics Platform",
+  "traced_at": "2026-06-13T22:36:53.151002",
+  "upstream_chain": [
+    {
+      "entity_id": "ASM-2026-001",
+      "entity_type": "assumption",
+      "label": "Enterprise Willingness to Pay for Privacy",
+      "status": "unvalidated",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "ASSUMES"
+    },
+    {
+      "entity_id": "ASM-2026-002",
+      "entity_type": "assumption",
+      "label": "Zero-Knowledge Performance Overhead is Acceptable",
+      "status": "unvalidated",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "ASSUMES"
+    },
+    {
+      "entity_id": "ASM-2026-003",
+      "entity_type": "assumption",
+      "label": "Competitive Moat via Switching Costs",
+      "status": "unvalidated",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "ASSUMES"
+    },
+    {
+      "entity_id": "OPP-2026-001",
+      "entity_type": "opportunity",
+      "label": "Zero Knowledge Analytics",
+      "status": "researching",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "TRD-2026-001",
+      "entity_type": "trend",
+      "label": "Privacy First SaaS Demand",
+      "status": "emerging",
+      "hop": 2,
+      "from_entity": "OPP-2026-001",
+      "via_relationship": "LEADS_TO"
+    },
+    {
+      "entity_id": "CMP-001",
+      "entity_type": "competitor",
+      "label": "SecureCorp",
+      "status": "active",
+      "hop": 2,
+      "from_entity": "OPP-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "SIG-2026-001",
+      "entity_type": "signal",
+      "label": "Customer Demand for Privacy",
+      "status": "active",
+      "hop": 3,
+      "from_entity": "TRD-2026-001",
+      "via_relationship": "LEADS_TO"
+    },
+    {
+      "entity_id": "SIG-2026-002",
+      "entity_type": "signal",
+      "label": "Competitors Adopting E2EE",
+      "status": "active",
+      "hop": 3,
+      "from_entity": "TRD-2026-001",
+      "via_relationship": "LEADS_TO"
+    }
+  ],
+  "downstream_chain": [
+    {
+      "entity_id": "INI-2026-001",
+      "entity_type": "initiative",
+      "label": "Zero-Knowledge MVP Development",
+      "status": "active",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "GENERATES"
+    },
+    {
+      "entity_id": "FRC-2026-001",
+      "entity_type": "forecast",
+      "label": "Will SecureCorp launch a zero-knowledge analytics product by October 31, 2026?",
+      "status": "active",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "GENERATES"
+    },
+    {
+      "entity_id": "MMD-001",
+      "entity_type": "mental-model",
+      "label": "First Principles",
+      "status": "active",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "INFLUENCES"
+    },
+    {
+      "entity_id": "MMD-003",
+      "entity_type": "mental-model",
+      "label": "Network Effects",
+      "status": "active",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "INFLUENCES"
+    },
+    {
+      "entity_id": "OUT-2026-001",
+      "entity_type": "outcome",
+      "label": "Zero-Knowledge MVP Release",
+      "status": "complete",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "LSN-2026-001",
+      "entity_type": "lesson",
+      "label": "Complexity of Zero-Knowledge UX",
+      "status": "active",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "SCE-2026-005",
+      "entity_type": "scenario",
+      "label": "Build Zero-Knowledge Analytics Platform \u2014 Systemic Cryptographical Breach",
+      "status": "inactive",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "SCE-2026-002",
+      "entity_type": "scenario",
+      "label": "Build Zero-Knowledge Analytics Platform \u2014 Standard Execution Path",
+      "status": "active",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "SCE-2026-003",
+      "entity_type": "scenario",
+      "label": "Build Zero-Knowledge Analytics Platform \u2014 Key Assumption Failure & Price War",
+      "status": "inactive",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "SCE-2026-001",
+      "entity_type": "scenario",
+      "label": "Build Zero-Knowledge Analytics Platform \u2014 Ideal Market Adoption",
+      "status": "inactive",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "SCE-2026-004",
+      "entity_type": "scenario",
+      "label": "Build Zero-Knowledge Analytics Platform \u2014 Uncapped Enterprise Demand",
+      "status": "inactive",
+      "hop": 1,
+      "from_entity": "DEC-2026-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "RSK-2026-001",
+      "entity_type": "risk",
+      "label": "Developer Talent Shortage for Cryptography",
+      "status": "active",
+      "hop": 2,
+      "from_entity": "INI-2026-001",
+      "via_relationship": "GENERATES"
+    },
+    {
+      "entity_id": "MMD-008",
+      "entity_type": "mental-model",
+      "label": "Second-Order Effects",
+      "status": "active",
+      "hop": 2,
+      "from_entity": "MMD-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "MMD-005",
+      "entity_type": "mental-model",
+      "label": "Incentives",
+      "status": "active",
+      "hop": 2,
+      "from_entity": "MMD-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "MMD-007",
+      "entity_type": "mental-model",
+      "label": "Optionality",
+      "status": "active",
+      "hop": 2,
+      "from_entity": "MMD-001",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "MMD-006",
+      "entity_type": "mental-model",
+      "label": "Marketplaces",
+      "status": "active",
+      "hop": 2,
+      "from_entity": "MMD-003",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "MMD-004",
+      "entity_type": "mental-model",
+      "label": "Switching Costs",
+      "status": "active",
+      "hop": 2,
+      "from_entity": "MMD-003",
+      "via_relationship": "RELATES_TO"
+    },
+    {
+      "entity_id": "MMD-002",
+      "entity_type": "mental-model",
+      "label": "Power Laws",
+      "status": "active",
+      "hop": 3,
+      "from_entity": "MMD-007",
+      "via_relationship": "RELATES_TO"
+    }
+  ],
+  "summary": {
+    "total_upstream_nodes": 8,
+    "total_downstream_nodes": 18,
+    "entity_types_in_chain": {
+      "assumption": 3,
+      "opportunity": 1,
+      "trend": 1,
+      "competitor": 1,
+      "signal": 2,
+      "initiative": 1,
+      "forecast": 1,
+      "mental-model": 8,
+      "outcome": 1,
+      "lesson": 1,
+      "scenario": 5,
+      "risk": 1
+    },
+    "chain_depth_upstream": 3,
+    "chain_depth_downstream": 3
+  }
+}
