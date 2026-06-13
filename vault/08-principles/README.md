@@ -1,12 +1,2 @@
 # Principles
-
-Store durable operating principles and decision rules here.
-
-Recommended notes:
-
-- Decision principles
-- Investing principles
-- Forecasting principles
-- Business model principles
-- Personal CEO operating rules
-
+Heuristics, operating frameworks, and the Decision Rules that govern the venture studio. These are updated continuously by the Learning Advisor.

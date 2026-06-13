@@ -1,0 +1,195 @@
+# CSS Snippets for Obsidian
+Various CSS Snippets for Obsidian's "Edit" view (I never use the Reading view 😁), using the default theme in light mode. They are modular on purpose, so that they can be easily enabled or disabled individually.
+
+<details>
+<summary>01-variables.css</summary>
+
+Sets the variables that  should be carried over across the various snippets. It is prefixed with `01-` to ensure that it will always load first.
+
+</details>
+
+<details>
+<summary>bases.css</summary>
+
+Styling improvements for [Bases](https://help.obsidian.md/bases), Obsidian's built-in database view. Currently includes:
+
+* Row hover highlight, using `--background-modifier-hover` so it adapts automatically to both light and dark themes.
+
+![bases-row-hover.png](.github/assets/bases-row-hover.png)
+![bases-row-hover-light.png](.github/assets/bases-row-hover-light.png)
+
+</details>
+
+<details>
+<summary>bg-grid.css</summary>
+
+Adds a square grid background to all notes with the `bg--grid` cssclasses value in their properties. The vertical offset can be fine-tuned via `--bg-offset` in `01-variables.css` to align the grid with the actual text baseline. The default is `0px` — adjust up or down in small increments (e.g. `4px`, `-4px`) until the grid lines match your font and theme.
+
+```yaml
+---
+cssclasses:
+  - bg--grid
+---
+```
+
+![bg-grid.png](.github/assets/bg-grid.png)
+
+</details>
+
+<details>
+<summary>bg-lines.css</summary>
+
+Adds horizontal lines to all notes with the `bg--lines` cssclasses value in their properties. The vertical offset can be fine-tuned via `--bg-offset` in `01-variables.css` to align lines with the actual text baseline. The default is `0px` — adjust up or down in small increments (e.g. `4px`, `-4px`) until the lines match your font and theme.
+
+```yaml
+---
+cssclasses:
+  - bg--lines
+---
+```
+
+![bg-lines.png](.github/assets/bg-lines.png)
+
+</details>
+
+<details>
+<summary>callout-spoiler.css</summary>
+
+Styles a `spoiler` custom [callout](https://help.obsidian.md/Editing+and+formatting/Callouts), and reveals its contents after the box is both expanded and the user hovers over the content area.
+
+![callout-spoiler.gif](.github/assets/callout-spoiler.gif)
+
+Syntax:
+```markdown
+> [!spoiler]- Spoiler
+> The butler did it!
+```
+
+</details>
+
+<details>
+<summary>code.css</summary>
+
+* Changes to the CodeBlock layout. It uses `filter: invert()` so that it applies the reverse styling on dark mode. 
+* Highlights the hovered line.
+* Adds numbers to the side. 
+
+![code.png](.github/assets/code.png)
+
+</details>
+
+<details>
+<summary>comments.css</summary>
+
+Converts [comments](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Comments) to tooltips which show their content on hover. It works for both inline and block comments. 
+
+![comments.gif](.github/assets/comments.gif)
+
+Syntax:
+```markdown
+You can use inline footnotes ^[This is an inline footnote.] and then continue your text.
+```
+
+</details>
+
+<details>
+<summary>footnotes.css</summary>
+
+Converts [inline footnotes](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Footnotes) to tooltips which show their content on hover.
+
+![footnote.gif](.github/assets/footnote.gif)
+
+Syntax:
+```markdown
+You can use inline footnotes ^[This is an inline footnote.] and then continue your text.
+```
+
+</details>
+
+<details>
+<summary>headings.css</summary>
+
+Styles the various headings.
+
+![headings.png](.github/assets/headings.png)
+
+</details>
+
+<details>
+<summary>lists.css</summary>
+
+Styles the lists (ordered and unordered).
+
+![lists.png](.github/assets/lists.png)
+
+</details>
+
+<details>
+<summary>prose.css</summary>
+
+Long-form reading typography, activated per-note via the `prose` cssclasses value. Centres the title, justifies and indents paragraphs, and constrains line length to `--prose-width` (default `560px`, configurable in `01-variables.css`). Works in both reading mode and live preview.
+
+Syntax:
+```yaml
+---
+cssclasses:
+  - prose
+---
+```
+
+![prose.png](.github/assets/prose.png)
+
+</details>
+
+<details>
+<summary>properties.css</summary>
+
+Styles the properties block.
+
+![properties.png](.github/assets/properties.png)
+
+</details>
+
+<details>
+<summary>quote.css</summary>
+
+Styles the quote block.
+
+![quote.png](.github/assets/quote.png)
+
+</details>
+
+<details>
+<summary>sidebar.css</summary>
+
+Hides the Attachments folder from the sidebar.
+
+</details>
+
+<details>
+<summary>table.css</summary>
+
+Styling changes to the tables from the [Advanced Table](https://github.com/tgrosinger/advanced-tables-obsidian) plugin.
+
+![table.png](.github/assets/table.png)
+
+</details>
+
+<details>
+<summary>word-count.css</summary>
+
+A small modification for the [Better Word Count](https://github.com/lukeleppan/better-word-count) plugin, which only shows the counter on hover. 
+
+![word-count.png](.github/assets/word-count.png)
+
+</details>
+
+---
+
+![settings.png](.github/assets/settings.png)
+![compare.png](.github/assets/compare.png)
+
+# My other Obsidian projects
+* 👉 [Sentinel](https://github.com/gsarig/obsidian-sentinel): Update properties or run commands based on document visibility changes (e.g. every time a note opens or closes).
+* 👉 [Varinote](https://github.com/gsarig/obsidian-varinote): Add variables in Templates and set their values during the Note creation.
+* 👉 [AI Playbooks](https://github.com/gsarig/ai-playbooks): A collection of standalone workflow blueprints for AI-assisted creative and knowledge work, each usable as an Obsidian vault.

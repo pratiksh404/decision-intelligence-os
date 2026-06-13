@@ -1,0 +1,32 @@
+# Codex CLI MCP configuration
+# Location: ~/.codex/config.toml (append this block to your existing config)
+
+[mcp_servers.obsidian]
+command = "npx"
+args = ["-y", "mcp-obsidian"]
+enabled = true
+
+[mcp_servers.obsidian.env]
+OBSIDIAN_VAULT_PATH = "/Users/pratiksh/Documents/work/decision-intelligence-os/vault"
+OBSIDIAN_API_KEY = "${OBSIDIAN_API_KEY}"
+
+[mcp_servers.filesystem]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "/Users/pratiksh/Documents/work/decision-intelligence-os"]
+enabled = true
+
+[mcp_servers.git]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-git"]
+enabled = true
+
+[mcp_servers.git.env]
+GIT_REPO_PATH = "/Users/pratiksh/Documents/work/decision-intelligence-os"
+
+[mcp_servers.firecrawl]
+command = "npx"
+args = ["-y", "firecrawl-mcp"]
+enabled = true
+
+[mcp_servers.firecrawl.env]
+FIRECRAWL_API_KEY = "${FIRECRAWL_API_KEY}"

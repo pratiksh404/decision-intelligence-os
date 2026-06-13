@@ -1,0 +1,4 @@
+mcp/.env
+mcp/secrets/
+*.key
+*.pem

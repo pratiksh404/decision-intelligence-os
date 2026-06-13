@@ -1,0 +1,9 @@
+{
+  "cssTheme": "Minimal",
+  "monospaceFontFamily": "FiraMono Nerd Font",
+  "textFontFamily": "FiraMono Nerd Font",
+  "interfaceFontFamily": "FiraMono Nerd Font",
+  "enabledCssSnippets": [
+    "word-count"
+  ]
+}

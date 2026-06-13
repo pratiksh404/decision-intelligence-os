@@ -1,87 +1,46 @@
-# Forecast Template
-
-```yaml
 ---
-title:
+title: 
 type: forecast
-status: draft
-created:
-updated:
-review_date:
-resolution_date:
-owner: Founder/CEO
+status: active
+created: <% tp.file.creation_date("YYYY-MM-DD") %>
+updated: <% tp.file.last_modified_date("YYYY-MM-DD") %>
+question: 
+predicted_probability: 0.50
+confidence_score: 5
+deadline: 
+resolution_criteria: 
+actual_result: 
+brier_score: 
+related_decision: 
 tags:
   - forecast
-  - probability
-  - decision-intelligence
-confidence_score:
-source_quality:
-evidence_strength:
-decision_readiness:
-related:
+  - decision-layer
 ---
-```
-
-## Executive Summary
+# Forecast: {{title}}
 
 ## Forecast Question
+[e.g., "Will we achieve 1,000 active users by December 31, 2026?"]
 
-## Category
+## Current Probability Estimate
+- **Estimated Probability:** %
+- **Confidence Level:** /10
 
-Sports / Polymarket / Financial Markets / Business Outcome / Strategic
+## Base Rates & Historical Context
+- **Base Rate:** [What typically happens in similar situations?]
+- **Reference Class:** 
 
-## Time Horizon
-
-## Resolution Criteria
-
-## Evidence
-
-## Counter-Evidence
-
-## Unknown Variables
+## Evidence Ledger
+- **Supporting Evidence (Why it will happen):** 
+- **Counter-Evidence (Why it won't happen):** 
+- **Unknown Variables (Information we lack):** 
 
 ## Scenario Analysis
+- **Scenario 1 (Best Case):** 
+- **Scenario 2 (Base Case):** 
+- **Scenario 3 (Worst Case):** 
 
-### Best Case
-
-### Base Case
-
-### Worst Case
-
-## Probability Estimates
-
-- Outcome A:
-- Outcome B:
-- Outcome C:
-
-## Confidence Rating
-
-## Most Important Variables
-
-## Probability Update Triggers
-
-## Recommended Decision
-
-## Execution Plan
-
-## Risks
-
-## Next Actions
-
-## Review Schedule
-
-## Resolution Review
-
-### Actual Outcome
-
-### Calibration Notes
-
-### Lessons
-
-## Confidence Assessment
-
-- Confidence Score:
-- Source Quality:
-- Evidence Strength:
-- Decision Readiness:
-
+## Calibration & Resolution Log
+- **Deadline:** 
+- **Resolution Criteria:** 
+- **Actual Result:** 
+- **Error (Variance):** 

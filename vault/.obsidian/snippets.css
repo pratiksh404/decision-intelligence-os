@@ -1,0 +1,10 @@
+/* Better line height for Fira Mono */
+body, .cm-content, .markdown-source-view {
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
+/* Code blocks sharper */
+.markdown-rendered pre, .cm-line {
+  font-feature-settings: "ss01", "ss02", "zero";
+}

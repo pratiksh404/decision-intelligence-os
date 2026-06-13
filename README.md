@@ -1,168 +1,149 @@
-# Decision Intelligence OS
+# CEO Decision Intelligence Platform
 
-Personal AI-powered decision intelligence operating system for a founder/CEO.
+A high-performance, compounding decision-intelligence operating system for startup founders and CEOs. Built on a six-layer architecture, this platform integrates market signals, assumptions, decisions, disciplinary forecasting, and outcome reviews to continuously calibrate judgment and build an organizational brain that gets smarter over years.
 
-This repository is not a note-taking vault and not a second brain. It is a portable operating system for opportunity discovery, market intelligence, forecasting, strategic decision support, and execution planning.
-
-The founder acts as CEO. AI agents perform structured research, critique, probability assessment, and planning.
+---
 
 ## Vision
+The CEO Decision Intelligence Platform exists to build a compounding judgment advantage. It enforces a strict discipline: separating facts, assumptions, predictions, opinions, and decisions, and closing the learning loop so that every success and failure improves future decision quality.
 
-Decision Intelligence OS exists to build a compounding intelligence advantage for a one-person venture studio. Its purpose is to help the founder discover high-quality opportunities earlier, avoid bad decisions faster, forecast uncertain outcomes with discipline, and convert decisions into execution plans.
+---
 
-Every artifact must support one of three outcomes:
+## 1. System Architecture (6 Layers)
 
-- Opportunity Discovery
-- Decision Making
-- Execution
+The platform is organized around six cognitive layers, mapped to the directory structure:
 
-Anything else is treated as operational noise.
+1. **Intelligence Layer** (`vault/01-intelligence/`): Captures inputs (Signals, Trends, Competitor Profiles, Opportunities) before decisions are made.
+2. **Decision Layer** (`vault/02-decisions/`): Converts intelligence into choices via the Assumption Registry, Decision Memos, and Disciplinary Forecasting.
+3. **Execution Layer** (`vault/03-execution/`): Tracks implementation through Initiatives, KPIs, and Risk Registries.
+4. **Learning Layer** (`vault/04-learning/`): Compounds intelligence via Outcome Reviews, forecast Calibration (Brier scores), and Bias Auditing.
+5. **Strategy Layer** (`vault/05-strategy/`): Directs focus and resources to long-term pillars via Strategic Themes, Bets, Resource Allocation models, and the Opportunity Portfolio.
+6. **Meta-Intelligence Layer** (`vault/06-meta-intelligence/`): Tracks the system's performance, Brier scores, Org IQ, and AI advisor performance.
 
-## Architecture
+---
 
-The system has two first-class layers:
+## 2. Directory Structure
 
-1. **Obsidian Intelligence Vault**
-   A markdown-native workspace for opportunities, decisions, forecasts, intelligence reports, execution plans, source notes, and reviews.
-
-2. **Portable AI Agent and Workflow System**
-   Tool-agnostic advisor definitions, workflow protocols, templates, and operating principles that can be used across Claude Code, Codex, Cursor, Windsurf, Roo Code, Aider, Antigravity, Opencode, Copilot, and other AI assistants.
-
-The repository deliberately avoids vendor lock-in. Markdown is the durable interface. Frontmatter, tags, links, and predictable folder names make the system automation-ready.
-
-## Folder Structure
+The repository has a strict folder convention:
 
 ```text
 decision-intelligence-os/
-  README.md
-  AGENTS.md
-  advisors/                 AI advisory board definitions
-  workflows/                Repeatable decision and intelligence workflows
-  templates/                Obsidian-ready artifact templates
-  operating-system/         Principles, standards, metadata, cadence
-  vault/                    Working intelligence vault
-  reviews/                  Review protocols and scorecards
-  automation/               Future automation roadmap and specs
-  docs/                     Design specs, implementation plans, usage docs
-  .obsidian/                Minimal Obsidian configuration notes
+├── README.md
+├── AGENTS.md                       # Operating principles for AI assistants
+├── advisors/                       # Standard definitions of simulated advisors
+├── workflows/                      # Repeatable decision and learning workflows
+├── templates/                      # 20+ Obsidian Templater-ready schemas
+├── operating-system/               # Standards, metadata, and cadence specs
+└── vault/                          # Master Data Vault (Obsidian Vault root)
+    ├── 00-Inbox/                   # Raw inbox capture
+    ├── 01-Intelligence/            # Signals, trends, competitors, opportunities
+    ├── 02-Decisions/               # Assumptions, memos, forecasts, review workflows
+    ├── 03-Execution/               # Initiatives, KPIs, risks
+    ├── 04-Learning/                # Outcome reviews, lessons, calibrations, bias audits
+    ├── 05-Strategy/                # Pillars, bets, resource ledgers, portfolios
+    └── 06-Meta-Intelligence/       # Cockpits, performance reports, advisor metrics
 ```
 
-## Agent System
+---
 
-The AI Advisory Board contains seven specialized advisors:
+## 3. The 10-Agent System
 
-- CEO: vision, strategy, positioning, long-term advantage
-- CFO: economics, margins, ROI, capital efficiency, risk
-- VC: market size, scalability, defensibility, venture potential
-- Skeptic: failure modes, invalid assumptions, competitive threats
-- Operator: execution plans, resources, process, delivery risk
-- Intelligence Analyst: research quality, evidence, trends, source reliability
-- Probability Analyst: Bayesian reasoning, scenarios, base rates, confidence
+The platform is driven by a coordinated multi-agent team designed to support the CEO:
 
-Each advisor has a dedicated file in `advisors/` with mission, responsibilities, diagnostic questions, analysis framework, and output format.
+1. [Research Analyst](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/research-analyst.md): Sources and verifies facts, TAM, and data.
+2. [Competitive Analyst](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/competitive-analyst.md): Teardowns competitor features, pricing, and threats.
+3. [Probability Analyst](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/probability-analyst.md): Removes forecasting bias and calculates Brier calibration.
+4. [Risk Analyst](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/risk-analyst.md): Runs pre-mortems and designs risk mitigations.
+5. [Strategic Advisor](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/strategic-advisor.md): Maps projects to Strategic Themes and Bets.
+6. [Red Team Advisor](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/red-team-advisor.md): Attacks assumptions and negates hypotheses.
+7. [Execution Advisor](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/execution-advisor.md): Builds milestones, tracks hours, and monitors lead metrics.
+8. [Learning Advisor](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/learning-advisor.md): Conducts outcome post-mortems and extracts heuristic rules.
+9. [Portfolio Manager](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/portfolio-manager.md): Ranks opportunities using a weighted scoring model.
+10. [Chief of Staff](file:///Users/pratiksh/Documents/work/decision-intelligence-os/advisors/chief-of-staff.md): Synthesis reports, manages review dates, and maintains metadata hygiene.
 
-## Workflow System
+Simulate these board members before signing off on any decision by running the workflows in `workflows/` with your AI coding assistant.
 
-Core workflows live in `workflows/`:
+---
 
-- Business Opportunity Analysis
-- Market Intelligence
-- Forecasting
-- Decision Memo
-- Execution Planning
-- Weekly CEO Review
+## 4. Key Cockpit Queries (Dataview)
 
-Every major analysis follows:
+To run the real-time cockpits in Obsidian, use the queries documented in [docs/platform-architecture.md](file:///Users/pratiksh/Documents/work/decision-intelligence-os/docs/platform-architecture.md#L300-L360). 
 
+### Example: Opportunity Ranking Query
+```sql
+TABLE market, confidence_score, estimated_value, 
+  ((score_expected_return * 0.3) + (score_probability * 0.2) + (score_strategic_fit * 0.2) - (score_execution_complexity * 0.15) - (score_resource_requirement * 0.15)) AS composite_score
+FROM "vault/01-intelligence/opportunities" OR "vault/05-strategy/portfolio"
+WHERE status = "researching" OR status = "ready-for-review"
+SORT composite_score DESC
+```
+
+---
+
+## 5. Phase 2 — Active Intelligence System
+
+Phase 2 transforms the vault from a structured repository into an active intelligence system.
+
+### New Directories
 ```text
-Question -> Research -> Evidence Collection -> Analysis -> Counterarguments
--> Probability Assessment -> Decision -> Execution Plan -> Review Schedule
+mcp/                            # MCP integration configs and installation guide
+workflows/skills/               # Reusable agent skill specifications
+vault/06-meta-intelligence/dashboards/
+  ├── ceo-cockpit.md            # Executive Intelligence Dashboard (6-layer view)
+  ├── forecast-calibration-dashboard.md
+  ├── assumption-intelligence-dashboard.md
+  ├── weekly-reports/
+  ├── daily-reviews/
+  ├── monthly-reviews/
+  └── quarterly-reviews/
+vault/05-strategy/portfolio/
+  └── opportunity-score.md      # Scoring engine spec and formula
 ```
 
-## Daily Usage
+### New Templates
+| Template | Purpose |
+|---|---|
+| `forecast-v2.md` | Full calibration fields: category, brier_score, calibration_error |
+| `assumption-v2.md` | invalidation_risk, depends_on_assumptions, evidence_status |
+| `opportunity-v2.md` | 6-factor weighted scoring with composite_score |
+| `weekly-intelligence-report.md` | Automated 7-section CEO briefing |
+| `daily-review.md` | Daily inbox triage and priorities |
+| `monthly-review.md` | Calibration, bias detection, portfolio review |
+| `quarterly-review.md` | Strategy, resources, bets |
 
-Use the system as a CEO cockpit:
+### MCP Integration
+Four MCP servers for AI-first operation:
+- **obsidian-mcp**: vault search, read, metadata update
+- **filesystem-mcp**: templates, workflows, advisors read access
+- **git-mcp**: audit trail and decision rollback
+- **firecrawl-mcp**: market research and signal ingestion
 
-1. Capture raw signals in `vault/00-inbox/`.
-2. Convert promising signals into opportunity, forecast, intelligence, or decision artifacts.
-3. Run the appropriate workflow with the AI Advisory Board.
-4. Record decisions separately from facts and assumptions.
-5. Move approved work into execution plans with KPIs and review dates.
+See `mcp/installation-guide.md` to set up.
 
-Daily questions:
+### Opportunity Scoring Formula
+```
+composite_score = (expected_return × 0.25) + (probability × 0.20)
+                + (strategic_fit × 0.20)   - (execution_complexity × 0.15)
+                - (resource_requirement × 0.10) - (risk × 0.10)
+```
 
-- What changed in the market?
-- What new opportunity deserves investigation?
-- What decision requires evidence?
-- What forecast needs updating?
-- What execution plan is off-track?
+### Agent Skills
+Five reusable AI workflows in `workflows/skills/`:
+- `research-skill.md` — signal, trend, competitor artifact production
+- `opportunity-skill.md` — full advisor board scoring
+- `decision-challenge-skill.md` — red team + pre-mortem
+- `calibration-skill.md` — Brier score calculation and bias detection
+- `learning-skill.md` — lesson extraction and recurrence tracking
 
-## Weekly Reviews
+---
 
-Run `workflows/weekly-ceo-review.md` every week. The review should evaluate:
+## 6. Daily & Weekly Operating Cadence
 
-- New signals captured
-- Active opportunities
-- Open decisions
-- Forecast accuracy
-- Execution progress
-- Major risks
-- Next week's priority decisions
-
-The output belongs in `vault/07-reviews/`.
-
-## Forecasting Process
-
-Forecasts must never be binary. Each forecast must include:
-
-- Evidence
-- Counter-evidence
-- Unknown variables
-- Scenario analysis
-- Probability estimates
-- Confidence rating
-- Review trigger
-- Resolution criteria
-
-Use `templates/forecast.md` and `workflows/forecasting.md`.
-
-## Business Opportunity Process
-
-Every business opportunity analysis must include:
-
-- Problem
-- Customer
-- Opportunity
-- Why now
-- Initial hypothesis
-- Market size
-- Growth rate
-- Trends
-- Competitors
-- Customer pain points
-- Existing solutions
-- Advisory Board review
-- Probability assessment
-- Proceed / Monitor / Reject decision
-- 90-day execution plan
-
-Use `templates/opportunity.md` and `workflows/business-opportunity-analysis.md`.
-
-## Future Automation Roadmap
-
-Automation priorities:
-
-1. Ingest sources from web, RSS, newsletters, filings, odds markets, and saved links.
-2. Classify signals into opportunity, risk, trend, competitor, forecast, or execution categories.
-3. Generate draft intelligence reports from source bundles.
-4. Maintain forecast ledgers and calibration scores.
-5. Trigger review reminders based on frontmatter dates.
-6. Build dashboards for decisions, forecasts, opportunities, and execution.
-7. Add agent orchestration for advisor-board review.
-
-See `automation/roadmap.md`.
-
-## Operating Rule
-
-Always separate facts, assumptions, opinions, predictions, and decisions. Never present assumptions as facts. Never make predictions without evidence. Always explain uncertainty and seek disconfirming evidence.
-
+1. **Daily (Ingress & Triage):**
+   - Save web articles, statistics, or competitive actions to `vault/00-Inbox/`.
+   - Ask the Chief of Staff agent to triage and compile them into Signals (`vault/01-intelligence/signals/`).
+2. **Weekly Review (Evaluation & Alignment):**
+   - Run the [weekly review workflow](file:///Users/pratiksh/Documents/work/decision-intelligence-os/workflows/weekly-ceo-review.md).
+   - Evaluate new opportunities, update forecast probabilities, check KPI health, and monitor active risks.
+3. **Monthly Audit (Learning & Calibration):**
+   - Resolve expired forecasts, calculate Brier scores, conduct outcome reviews for completed decisions, and extract new heuristic rules.
