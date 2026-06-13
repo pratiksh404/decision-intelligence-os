@@ -2,3 +2,6 @@ mcp/.env
 mcp/secrets/
 *.key
 *.pem
+.venv/
+vault/06-meta-intelligence/graph/exports/
+vault/06-meta-intelligence/graph/diagnostics/

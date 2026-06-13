@@ -127,3 +127,146 @@ related_assumptions: []
 recurrence_count: 1   # increment when same pattern recurs
 related_review: "[[Outcome Review]]"
 ```
+
+---
+
+## 6. Phase 3 — Graph Metadata Standards
+
+### 6.1 Universal Graph Identity Fields (required on ALL entities)
+
+Every file must now include the following fields for graph extraction:
+
+```yaml
+entity_id: "TYPE-YYYY-NNN"    # e.g. DEC-2026-001, MMD-003, STH-001
+entity_type: [see type registry below]
+importance: 1-10
+```
+
+### 6.2 Entity ID Conventions
+
+| Type | Prefix | Format | Example |
+|---|---|---|---|
+| Signal | SIG | SIG-YYYY-NNN | SIG-2026-007 |
+| Trend | TRD | TRD-YYYY-NNN | TRD-2026-002 |
+| Competitor | CMP | CMP-NNN | CMP-001 |
+| Opportunity | OPP | OPP-YYYY-NNN | OPP-2026-003 |
+| Assumption | ASM | ASM-YYYY-NNN | ASM-2026-012 |
+| Decision | DEC | DEC-YYYY-NNN | DEC-2026-001 |
+| Forecast | FRC | FRC-YYYY-NNN | FRC-2026-005 |
+| Initiative | INI | INI-YYYY-NNN | INI-2026-002 |
+| Risk | RSK | RSK-YYYY-NNN | RSK-2026-008 |
+| Outcome | OUT | OUT-YYYY-NNN | OUT-2026-001 |
+| Lesson | LSN | LSN-YYYY-NNN | LSN-2026-004 |
+| Strategic Theme | STH | STH-NNN | STH-001 |
+| Strategic Bet | BET | BET-YYYY-NNN | BET-2026-001 |
+| KPI | KPI | KPI-YYYY-NNN | KPI-2026-006 |
+| Resource Allocation | RES | RES-YYYY-NNN | RES-2026-003 |
+| Advisor Review | ADV | ADV-YYYY-NNN | ADV-2026-011 |
+| Experiment | EXP | EXP-YYYY-NNN | EXP-2026-001 |
+| Evidence | EVD | EVD-YYYY-NNN | EVD-2026-009 |
+| Research Report | RPT | RPT-YYYY-NNN | RPT-2026-002 |
+| Weekly Intel Report | WIR | WIR-YYYY-WNN | WIR-2026-W24 |
+| Bias Audit | BAU | BAU-YYYY-NNN | BAU-2026-001 |
+| Calibration Record | CAL | CAL-YYYY-QN | CAL-2026-Q2 |
+| **Mental Model** | **MMD** | **MMD-NNN** | **MMD-001** |
+
+### 6.3 File Naming Convention
+
+```
+{entity_id} — {kebab-case-title}.md
+
+Examples:
+  DEC-2026-001 — expand-into-saas-market.md
+  MMD-003 — network-effects.md
+  ASM-2026-012 — smb-segment-willing-to-pay.md
+```
+
+### 6.4 Typed Relationship Fields (Phase 3)
+
+Replace untyped `related: [[...]]` with these typed fields for graph extraction:
+
+```yaml
+# Typed outgoing relationships
+assumes: []                     # ASSUMES → Assumption
+leads_to: []                    # LEADS_TO → Trend/Opportunity/Decision
+generates: []                   # GENERATES → Initiative/Evidence/Lesson
+depends_on: []                  # DEPENDS_ON → Assumption/Decision
+influences: []                  # INFLUENCES → Opportunity/Decision
+validates: []                   # VALIDATES → Assumption/Forecast
+invalidates: []                 # INVALIDATES → Assumption/Forecast
+belongs_to: []                  # BELONGS_TO → Theme/Bet/Report
+tracks: []                      # TRACKS → Initiative/KPI
+mitigates: []                   # MITIGATES → Risk
+mental_models_applied: []       # INFLUENCES → MentalModel (by entity_id)
+```
+
+### 6.5 Decision Lineage Fields
+
+Add to Decision, Opportunity, Initiative, and Outcome nodes:
+
+```yaml
+lineage:
+  chain_id: "CHAIN-YYYY-NNN"
+  chain_root: "SIG-YYYY-NNN"
+  chain_position: 3             # 1=signal, 2=trend, 3=opportunity, etc.
+  upstream:
+    - id: "OPP-2026-001"
+      type: opportunity
+      relationship: LEADS_TO
+  downstream:
+    - id: "INI-2026-002"
+      type: initiative
+      relationship: GENERATES
+```
+
+---
+
+## 7. Mental Model (Phase 3 — New Entity Type)
+
+```yaml
+| mental-model | vault/05-strategy/mental-models/ | Named cognitive framework applied to decisions |
+```
+
+### Mental Model Frontmatter
+```yaml
+entity_id: "MMD-NNN"
+entity_type: mental-model
+title: string
+subtype: first-principles | power-laws | network-effects | switching-costs |
+         incentives | marketplaces | optionality | inversion |
+         second-order-effects | base-rates | margin-of-safety |
+         regret-minimization | ooda-loop | activation-energy |
+         feedback-loops | other
+status: active | deprecated | under-review
+description: string
+core_question: string
+application_protocol: string
+failure_modes: string
+complementary_models: []        # List of MMD entity_ids
+contradicting_models: []        # List of MMD entity_ids
+related_decisions: []           # List of DEC entity_ids where applied
+related_outcomes: []            # List of OUT entity_ids that validated/invalidated
+related_lessons: []             # List of LSN entity_ids that improved this model
+application_count: 0            # Auto-incremented when model is applied
+confidence_score: 1-10
+importance: 1-10
+tags:
+  - mental-model
+  - strategy-layer
+```
+
+### Mental Model Status Transitions
+* `active` → `under-review` (when ≥2 outcomes contradict the model)
+* `under-review` → `active` (after review confirms model validity)
+* `under-review` → `deprecated` (if model is invalidated or superseded)
+
+### Canonical Mental Model Library (Phase 3 Seed)
+| ID | Model | Subtype |
+|---|---|---|
+| MMD-001 | First Principles | first-principles |
+| MMD-002 | Power Laws | power-laws |
+| MMD-003 | Network Effects | network-effects |
+| MMD-004 | Switching Costs | switching-costs |
+| MMD-005 | Incentives | incentives |
+| MMD-006 | Marketplaces | marketplaces |
+| MMD-007 | Optionality | optionality |

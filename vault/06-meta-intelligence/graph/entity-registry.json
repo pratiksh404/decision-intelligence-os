@@ -1,0 +1,323 @@
+{
+  "registry_version": "3.0",
+  "schema": "phase-3",
+  "last_updated": "2026-06-13",
+  "description": "Central entity registry for the Decision Intelligence OS. Prevents duplicate entity creation and enables graph extraction.",
+  "total_entities": 30,
+  "id_counters": {
+    "SIG": {
+      "2026": 3
+    },
+    "TRD": {
+      "2026": 2
+    },
+    "CMP": {
+      "canonical": 1
+    },
+    "OPP": {
+      "2026": 2
+    },
+    "ASM": {
+      "2026": 3
+    },
+    "DEC": {
+      "2026": 1
+    },
+    "FRC": {
+      "2026": 1
+    },
+    "INI": {
+      "2026": 1
+    },
+    "RSK": {
+      "2026": 1
+    },
+    "OUT": {
+      "2026": 1
+    },
+    "LSN": {
+      "2026": 1
+    },
+    "STH": {
+      "canonical": 0
+    },
+    "BET": {
+      "2026": 0
+    },
+    "KPI": {
+      "2026": 0
+    },
+    "RES": {
+      "2026": 0
+    },
+    "ADV": {
+      "2026": 0
+    },
+    "EXP": {
+      "2026": 0
+    },
+    "EVD": {
+      "2026": 0
+    },
+    "RPT": {
+      "2026": 0
+    },
+    "WIR": {
+      "2026": 0
+    },
+    "BAU": {
+      "2026": 0
+    },
+    "CAL": {
+      "2026": 0
+    },
+    "MMD": {
+      "canonical": 8
+    },
+    "SCE": {
+      "2026": 10
+    }
+  },
+  "entities": {
+    "OPP-2026-002": {
+      "type": "opportunity",
+      "subtype": "new-product",
+      "title": "Enterprise Privacy Gateway",
+      "file": "01-intelligence/opportunities/OPP-2026-002 \u2014 enterprise-privacy-gateway.md",
+      "status": "draft",
+      "created": "2026-05-26"
+    },
+    "OPP-2026-001": {
+      "type": "opportunity",
+      "subtype": "new-product",
+      "title": "Zero Knowledge Analytics",
+      "file": "01-intelligence/opportunities/OPP-2026-001 \u2014 zero-knowledge-analytics.md",
+      "status": "researching",
+      "created": "2026-05-25"
+    },
+    "SIG-2026-003": {
+      "type": "signal",
+      "subtype": "",
+      "title": "New Privacy Regulation Draft",
+      "file": "01-intelligence/signals/SIG-2026-003 \u2014 new-privacy-regulation-draft.md",
+      "status": "active",
+      "created": "2026-05-20"
+    },
+    "SIG-2026-001": {
+      "type": "signal",
+      "subtype": "",
+      "title": "Customer Demand for Privacy",
+      "file": "01-intelligence/signals/SIG-2026-001 \u2014 customer-demand-for-privacy.md",
+      "status": "active",
+      "created": "2026-05-10"
+    },
+    "SIG-2026-002": {
+      "type": "signal",
+      "subtype": "",
+      "title": "Competitors Adopting E2EE",
+      "file": "01-intelligence/signals/SIG-2026-002 \u2014 competitors-adopting-e2ee.md",
+      "status": "active",
+      "created": "2026-05-15"
+    },
+    "TRD-2026-001": {
+      "type": "trend",
+      "subtype": "market",
+      "title": "Privacy First SaaS Demand",
+      "file": "01-intelligence/trends/TRD-2026-001 \u2014 privacy-first-saas-demand.md",
+      "status": "emerging",
+      "created": "2026-05-22"
+    },
+    "TRD-2026-002": {
+      "type": "trend",
+      "subtype": "regulatory",
+      "title": "Regulatory Scrutiny on Data",
+      "file": "01-intelligence/trends/TRD-2026-002 \u2014 regulatory-scrutiny-on-data.md",
+      "status": "emerging",
+      "created": "2026-05-23"
+    },
+    "CMP-001": {
+      "type": "competitor",
+      "subtype": "direct",
+      "title": "SecureCorp",
+      "file": "01-intelligence/competitors/CMP-001 \u2014 securecorp.md",
+      "status": "active",
+      "created": "2026-05-15"
+    },
+    "INI-2026-001": {
+      "type": "initiative",
+      "subtype": "product",
+      "title": "Zero-Knowledge MVP Development",
+      "file": "03-execution/initiatives/INI-2026-001 \u2014 zero-knowledge-mvp-development.md",
+      "status": "active",
+      "created": "2026-05-30"
+    },
+    "RSK-2026-001": {
+      "type": "risk",
+      "subtype": "team",
+      "title": "Developer Talent Shortage for Cryptography",
+      "file": "03-execution/risks/RSK-2026-001 \u2014 developer-talent-shortage-for-cryptography.md",
+      "status": "active",
+      "created": "2026-05-30"
+    },
+    "MMD-008": {
+      "type": "mental-model",
+      "subtype": "second-order-effects",
+      "title": "Second-Order Effects",
+      "file": "05-strategy/mental-models/MMD-008 \u2014 second-order-effects.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "MMD-001": {
+      "type": "mental-model",
+      "subtype": "first-principles",
+      "title": "First Principles",
+      "file": "05-strategy/mental-models/MMD-001 \u2014 first-principles.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "MMD-006": {
+      "type": "mental-model",
+      "subtype": "marketplaces",
+      "title": "Marketplaces",
+      "file": "05-strategy/mental-models/MMD-006 \u2014 marketplaces.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "MMD-005": {
+      "type": "mental-model",
+      "subtype": "incentives",
+      "title": "Incentives",
+      "file": "05-strategy/mental-models/MMD-005 \u2014 incentives.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "MMD-007": {
+      "type": "mental-model",
+      "subtype": "optionality",
+      "title": "Optionality",
+      "file": "05-strategy/mental-models/MMD-007 \u2014 optionality.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "MMD-002": {
+      "type": "mental-model",
+      "subtype": "power-laws",
+      "title": "Power Laws",
+      "file": "05-strategy/mental-models/MMD-002 \u2014 power-laws.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "MMD-004": {
+      "type": "mental-model",
+      "subtype": "switching-costs",
+      "title": "Switching Costs",
+      "file": "05-strategy/mental-models/MMD-004 \u2014 switching-costs.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "MMD-003": {
+      "type": "mental-model",
+      "subtype": "network-effects",
+      "title": "Network Effects",
+      "file": "05-strategy/mental-models/MMD-003 \u2014 network-effects.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "OUT-2026-001": {
+      "type": "outcome",
+      "subtype": "",
+      "title": "Zero-Knowledge MVP Release",
+      "file": "04-learning/outcomes/OUT-2026-001 \u2014 zero-knowledge-mvp-release.md",
+      "status": "complete",
+      "created": "2026-06-10"
+    },
+    "LSN-2026-001": {
+      "type": "lesson",
+      "subtype": "product",
+      "title": "Complexity of Zero-Knowledge UX",
+      "file": "04-learning/lessons/LSN-2026-001 \u2014 complexity-of-zero-knowledge-ux.md",
+      "status": "active",
+      "created": "2026-06-12"
+    },
+    "DEC-2026-001": {
+      "type": "decision",
+      "subtype": "product",
+      "title": "Build Zero-Knowledge Analytics Platform",
+      "file": "02-decisions/memos/DEC-2026-001 \u2014 build-zero-knowledge-analytics-platform.md",
+      "status": "approved",
+      "created": "2026-05-28"
+    },
+    "ASM-2026-002": {
+      "type": "assumption",
+      "subtype": "product",
+      "title": "Zero-Knowledge Performance Overhead is Acceptable",
+      "file": "02-decisions/assumptions/ASM-2026-002 \u2014 zero-knowledge-performance-overhead-is-acceptable.md",
+      "status": "unvalidated",
+      "created": "2026-05-25"
+    },
+    "ASM-2026-003": {
+      "type": "assumption",
+      "subtype": "competition",
+      "title": "Competitive Moat via Switching Costs",
+      "file": "02-decisions/assumptions/ASM-2026-003 \u2014 competitive-moat-via-switching-costs.md",
+      "status": "unvalidated",
+      "created": "2026-05-25"
+    },
+    "ASM-2026-001": {
+      "type": "assumption",
+      "subtype": "market",
+      "title": "Enterprise Willingness to Pay for Privacy",
+      "file": "02-decisions/assumptions/ASM-2026-001 \u2014 enterprise-willingness-to-pay-for-privacy.md",
+      "status": "unvalidated",
+      "created": "2026-05-25"
+    },
+    "SCE-2026-005": {
+      "type": "scenario",
+      "subtype": "",
+      "title": "Build Zero-Knowledge Analytics Platform \u2014 Systemic Cryptographical Breach",
+      "file": "02-decisions/scenarios/SCE-2026-005 \u2014 dec-2026-001-black-swan-systemic-cryptographical-breach.md",
+      "status": "inactive",
+      "created": "2026-06-13"
+    },
+    "SCE-2026-002": {
+      "type": "scenario",
+      "subtype": "",
+      "title": "Build Zero-Knowledge Analytics Platform \u2014 Standard Execution Path",
+      "file": "02-decisions/scenarios/SCE-2026-002 \u2014 dec-2026-001-base-case-standard-execution-path.md",
+      "status": "active",
+      "created": "2026-06-13"
+    },
+    "SCE-2026-003": {
+      "type": "scenario",
+      "subtype": "",
+      "title": "Build Zero-Knowledge Analytics Platform \u2014 Key Assumption Failure & Price War",
+      "file": "02-decisions/scenarios/SCE-2026-003 \u2014 dec-2026-001-worst-case-key-assumption-failure-price-war.md",
+      "status": "inactive",
+      "created": "2026-06-13"
+    },
+    "SCE-2026-001": {
+      "type": "scenario",
+      "subtype": "",
+      "title": "Build Zero-Knowledge Analytics Platform \u2014 Ideal Market Adoption",
+      "file": "02-decisions/scenarios/SCE-2026-001 \u2014 dec-2026-001-best-case-ideal-market-adoption.md",
+      "status": "inactive",
+      "created": "2026-06-13"
+    },
+    "SCE-2026-004": {
+      "type": "scenario",
+      "subtype": "",
+      "title": "Build Zero-Knowledge Analytics Platform \u2014 Uncapped Enterprise Demand",
+      "file": "02-decisions/scenarios/SCE-2026-004 \u2014 dec-2026-001-stretch-case-uncapped-enterprise-demand.md",
+      "status": "inactive",
+      "created": "2026-06-13"
+    },
+    "FRC-2026-001": {
+      "type": "forecast",
+      "subtype": "competition",
+      "title": "Will SecureCorp launch a zero-knowledge analytics product by October 31, 2026?",
+      "file": "02-decisions/forecasts/FRC-2026-001 \u2014 securecorp-launches-competing-product-by-q4.md",
+      "status": "active",
+      "created": "2026-05-28"
+    }
+  }
+}
