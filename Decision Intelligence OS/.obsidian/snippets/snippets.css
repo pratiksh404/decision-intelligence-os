@@ -1,10 +1,374 @@
-/* Better line height for Fira Mono */
-body, .cm-content, .markdown-source-view {
-  line-height: 1.5;
-  letter-spacing: -0.2px;
+/* 
+   ==========================================================================
+   DECISION INTELLIGENCE OS | UX POLISH SYSTEM
+   Design Lead: Senior UI/UX Architect
+   ==========================================================================
+   
+   @settings
+   name: DI-OS Senior UX Polish
+   settings:
+     - id: di-os-theme-core
+       title: Core Aesthetic
+       type: heading
+       level: 1
+     - id: di-os-accent-glow
+       title: Enable Accent Glow
+       description: Adds a subtle glow to active elements and primary buttons.
+       type: class-toggle
+       default: true
+     - id: di-os-glassmorphism
+       title: Enable Glassmorphism
+       description: Adds backdrop-blur effects to callouts and dashboards.
+       type: class-toggle
+       default: true
+     - id: di-os-typography
+       title: Typography & Hierarchy
+       type: heading
+       level: 1
+     - id: heading-font-weight
+       title: Heading Weight
+       type: select
+       default: 700
+       options:
+         - value: 500
+           label: 500 - Medium
+         - value: 600
+           label: 600 - Semi-Bold
+         - value: 700
+           label: 700 - Bold
+         - value: 800
+           label: 800 - Extra-Bold
+     - id: body-line-height
+       title: Body Line Height
+       description: Optimal reading experience is usually between 1.5 and 1.7.
+       type: slider
+       default: 1.65
+       min: 1.4
+       max: 2.0
+       step: 0.05
+     - id: di-os-interactivity
+       title: Interactive Elements
+       type: heading
+       level: 1
+     - id: checkbox-style
+       title: Checkbox Aesthetic
+       type: select
+       default: modern-rounded
+       options:
+         - value: modern-rounded
+           label: Modern Rounded (App-like)
+         - value: sharp-square
+           label: Sharp Square
+         - value: subtle-dot
+           label: Minimalist Dot
+     - id: link-style
+       title: Link Hover Effect
+       type: select
+       default: underline-animated
+       options:
+         - value: underline-animated
+           label: Animated Underline
+         - value: background-ghost
+           label: Ghost Background
+         - value: classic
+           label: Classic
+*/
+
+/* ==========================================
+   1. SYSTEM TOKENS & DESIGN PRIMITIVES
+   ========================================== */
+:root {
+  /* Fluid Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+
+  /* Elevation (Senior UX uses multi-layered shadows) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* Micro-interactions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.3s var(--ease-out-expo);
+  --transition-snappy: 0.15s ease-out;
+
+  /* Typography Refinement */
+  --font-letter-spacing: -0.011em;
+  --font-heading-spacing: -0.022em;
 }
 
-/* Code blocks sharper */
-.markdown-rendered pre, .cm-line {
-  font-feature-settings: "ss01", "ss02", "zero";
+/* ==========================================
+   2. TYPOGRAPHY: THE SOUL OF THE INTERFACE
+   ========================================== */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
 }
+
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-rendered {
+  line-height: var(--body-line-height, 1.65);
+  letter-spacing: var(--font-letter-spacing);
+}
+
+/* Heading Hierarchy Polish */
+.markdown-rendered h1, .cm-header-1,
+.markdown-rendered h2, .cm-header-2,
+.markdown-rendered h3, .cm-header-3,
+.markdown-rendered h4, .cm-header-4 {
+  font-weight: var(--heading-font-weight, 700) !important;
+  letter-spacing: var(--font-heading-spacing);
+  color: var(--text-normal);
+  margin-top: 1.8em !important;
+  margin-bottom: 0.6em !important;
+}
+
+/* Sub-headings subtle differentiation */
+.markdown-rendered h4, .cm-header-4 {
+  text-transform: uppercase;
+  font-size: 0.85em !important;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* ==========================================
+   3. SIDEBAR & NAVIGATION: APP-LIKE FEEL
+   ========================================== */
+.nav-file-title, .nav-folder-title {
+  padding: 6px 10px !important;
+  margin: 1px 6px !important;
+  border-radius: 6px !important;
+  font-size: 0.92em;
+  font-weight: 450;
+  color: var(--text-muted);
+  transition: all var(--transition-snappy);
+}
+
+.nav-file-title:hover, .nav-folder-title:hover {
+  background-color: var(--background-modifier-hover) !important;
+  color: var(--text-normal) !important;
+  transform: translateX(2px);
+}
+
+.nav-file-title.is-active {
+  background-color: var(--background-modifier-active-hover) !important;
+  color: var(--text-accent) !important;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Collapsible Folders Arrows */
+.nav-folder-collapse-indicator {
+  opacity: 0.5;
+  transition: transform var(--transition-snappy), opacity var(--transition-snappy);
+}
+
+.nav-folder-title:hover .nav-folder-collapse-indicator {
+  opacity: 1;
+}
+
+/* ==========================================
+   4. INTERACTIVE ELEMENTS: BUTTONS & CHECKBOXES
+   ========================================== */
+
+/* Modern Rounded Checkboxes */
+.task-list-item-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.2em !important;
+  height: 1.2em !important;
+  border-radius: 6px !important;
+  border: 2px solid var(--checkbox-border-color, var(--text-faint)) !important;
+  margin-right: 0.5em !important;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-snappy);
+  background-color: transparent !important;
+}
+
+.task-list-item-checkbox:checked {
+  background-color: var(--interactive-accent) !important;
+  border-color: var(--interactive-accent) !important;
+}
+
+.task-list-item-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  color: var(--text-on-accent, white);
+  font-size: 0.8em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+}
+
+.task-list-item-checkbox:hover {
+  border-color: var(--interactive-accent) !important;
+  background-color: rgba(var(--accent-rgb), 0.05) !important;
+}
+
+/* Animated Links */
+.markdown-rendered a.internal-link {
+  text-decoration: none;
+  background-image: linear-gradient(var(--text-accent), var(--text-accent));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size var(--transition-smooth), color var(--transition-snappy);
+  color: var(--text-accent);
+}
+
+.markdown-rendered a.internal-link:hover {
+  background-size: 100% 2px;
+  color: var(--text-accent-hover);
+}
+
+/* ==========================================
+   5. COMPONENT POLISH: CALLOUTS & CARDS
+   ========================================== */
+.callout {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-sm) !important;
+  padding: var(--space-md) !important;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth) !important;
+  overflow: hidden;
+}
+
+.callout:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* Glassmorphism Logic */
+.di-os-glassmorphism .callout {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(var(--mono-rgb-100), 0.03);
+}
+
+/* Callout Title Typography */
+.callout-title {
+  font-weight: 700 !important;
+  font-size: 0.92em !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid rgba(var(--mono-rgb-200), 0.05);
+}
+
+/* ==========================================
+   6. METADATA & PROPERTIES: DATA CLARITY
+   ========================================== */
+.metadata-container {
+  background-color: var(--background-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 10px !important;
+  padding: var(--space-sm) var(--space-md) !important;
+  margin-top: var(--space-md) !important;
+  box-shadow: var(--shadow-inner);
+}
+
+.metadata-property-key {
+  font-family: var(--font-interface);
+  font-size: 0.8em !important;
+  font-weight: 600 !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metadata-property-value {
+  font-size: 0.9em !important;
+  color: var(--text-normal);
+}
+
+/* ==========================================
+   7. DASHBOARD ENHANCEMENTS (DI-OS SPECIFIC)
+   ========================================== */
+.di-metric-card {
+  border-radius: 14px !important;
+  background: var(--background-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.di-metric-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--interactive-accent), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.di-metric-card:hover::before {
+  opacity: 1;
+}
+
+.di-metric-value {
+  font-family: var(--font-interface);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+/* ==========================================
+   8. VISUAL POLISH: IMAGES & SCROLLBARS
+   ========================================== */
+img {
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-smooth);
+}
+
+img:hover {
+  transform: scale(1.01);
+}
+
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-faint) !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-muted) !important;
+}
+
+/* ==========================================
+   9. FOCUS MODE (ZEN OPTIMIZATION)
+   ========================================== */
+/* Subtle dimming of inactive lines in editing mode */
+.markdown-source-view.mod-cm6 .cm-line:not(.cm-activeLine) {
+  opacity: 0.85;
+  transition: opacity var(--transition-snappy);
+}
+
+/* Active line focus accent */
+.cm-activeLine {
+  background-color: rgba(var(--accent-rgb), 0.02) !important;
+  border-left: 2px solid var(--interactive-accent);
+}
+
+/* ==========================================
+   10. UTILITIES
+   ========================================== */
+.u-shadow-soft { box-shadow: var(--shadow-lg) !important; }
+.u-glass { backdrop-filter: blur(10px); background: rgba(var(--mono-rgb-100), 0.05); }
+.u-radius-xl { border-radius: 20px !important; }

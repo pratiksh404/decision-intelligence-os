@@ -1,9 +1,9 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-06-13T22:43:41.116515",
+  "generated_at": "2026-06-15T01:33:18.580406",
   "vault_path": "/Users/pratiksh/Documents/work/decision-intelligence-os/vault",
   "statistics": {
-    "total_nodes": 30,
+    "total_nodes": 33,
     "total_edges": 67,
     "node_types": {
       "opportunity": 2,
@@ -12,12 +12,13 @@
       "competitor": 1,
       "initiative": 1,
       "risk": 1,
-      "mental-model": 8,
+      "mental-model": 9,
+      "scenario": 6,
+      "graph-health-report": 1,
       "outcome": 1,
       "lesson": 1,
       "decision": 1,
       "assumption": 3,
-      "scenario": 5,
       "forecast": 1
     },
     "edge_types": {
@@ -30,9 +31,9 @@
       "INFLUENCES": 3,
       "VALIDATES": 15
     },
-    "orphan_nodes": 0,
+    "orphan_nodes": 3,
     "broken_links": 0,
-    "graph_health_score": 96
+    "graph_health_score": 90
   },
   "nodes": [
     {
@@ -65,7 +66,7 @@
       "metadata": {
         "file_path": "01-intelligence/opportunities/OPP-2026-002 \u2014 enterprise-privacy-gateway.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -112,7 +113,7 @@
       "metadata": {
         "file_path": "01-intelligence/opportunities/OPP-2026-001 \u2014 zero-knowledge-analytics.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -145,7 +146,7 @@
       "metadata": {
         "file_path": "01-intelligence/signals/SIG-2026-003 \u2014 new-privacy-regulation-draft.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -179,7 +180,7 @@
       "metadata": {
         "file_path": "01-intelligence/signals/SIG-2026-001 \u2014 customer-demand-for-privacy.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -216,7 +217,7 @@
       "metadata": {
         "file_path": "01-intelligence/signals/SIG-2026-002 \u2014 competitors-adopting-e2ee.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -254,7 +255,7 @@
       "metadata": {
         "file_path": "01-intelligence/trends/TRD-2026-001 \u2014 privacy-first-saas-demand.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -291,7 +292,7 @@
       "metadata": {
         "file_path": "01-intelligence/trends/TRD-2026-002 \u2014 regulatory-scrutiny-on-data.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -325,7 +326,7 @@
       "metadata": {
         "file_path": "01-intelligence/competitors/CMP-001 \u2014 securecorp.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -357,7 +358,7 @@
       "metadata": {
         "file_path": "03-execution/initiatives/INI-2026-001 \u2014 zero-knowledge-mvp-development.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -389,7 +390,7 @@
       "metadata": {
         "file_path": "03-execution/risks/RSK-2026-001 \u2014 developer-talent-shortage-for-cryptography.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -436,7 +437,7 @@
       "metadata": {
         "file_path": "05-strategy/mental-models/MMD-008 \u2014 second-order-effects.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -484,7 +485,7 @@
       "metadata": {
         "file_path": "05-strategy/mental-models/MMD-001 \u2014 first-principles.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -533,7 +534,7 @@
       "metadata": {
         "file_path": "05-strategy/mental-models/MMD-006 \u2014 marketplaces.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -584,7 +585,7 @@
       "metadata": {
         "file_path": "05-strategy/mental-models/MMD-005 \u2014 incentives.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -633,7 +634,7 @@
       "metadata": {
         "file_path": "05-strategy/mental-models/MMD-007 \u2014 optionality.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -682,7 +683,7 @@
       "metadata": {
         "file_path": "05-strategy/mental-models/MMD-002 \u2014 power-laws.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -730,7 +731,7 @@
       "metadata": {
         "file_path": "05-strategy/mental-models/MMD-004 \u2014 switching-costs.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -779,7 +780,7 @@
       "metadata": {
         "file_path": "05-strategy/mental-models/MMD-003 \u2014 network-effects.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -788,6 +789,118 @@
         "strategy-layer",
         "competitive-moat",
         "marketplace"
+      ]
+    },
+    {
+      "id": "SCE-YYYY-NNN",
+      "type": "scenario",
+      "label": "Scenario Title",
+      "status": "inactive",
+      "properties": {
+        "entity_id": "SCE-YYYY-NNN",
+        "entity_type": "scenario",
+        "title": "Scenario Title",
+        "parent_decision": "[[DEC-YYYY-NNN]]",
+        "scenario_type": "best-case | base-case | worst-case | stretch-case | black-swan",
+        "status": "inactive",
+        "probability": 0.2,
+        "assumptions_tested": [
+          "[[ASM-YYYY-NNN]]"
+        ],
+        "triggers": [
+          "Trigger Condition 1"
+        ],
+        "expected_outcome": "Narrative of the expected outcome",
+        "resource_impact": {
+          "headcount_adjustment": 0,
+          "additional_capital": 0
+        },
+        "leading_indicators": [
+          "[[KPI-YYYY-NNN]]"
+        ],
+        "created": "YYYY-MM-DD",
+        "updated": "YYYY-MM-DD",
+        "owner": "Founder/CEO"
+      },
+      "metadata": {
+        "file_path": "templates/scenario.md",
+        "completeness_score": 100,
+        "last_extracted": "2026-06-15",
+        "schema_valid": true,
+        "missing_fields": []
+      },
+      "tags": [
+        "decision-layer",
+        "scenario"
+      ]
+    },
+    {
+      "id": "<% tp.file.title.split(\" \u2014 \")[0] %>",
+      "type": "mental-model",
+      "label": "<% tp.file.title.split(\" \u2014 \")[1] || tp.file.title %>",
+      "status": "active",
+      "properties": {
+        "entity_id": "<% tp.file.title.split(\" \u2014 \")[0] %>",
+        "entity_type": "mental-model",
+        "title": "<% tp.file.title.split(\" \u2014 \")[1] || tp.file.title %>",
+        "subtype": "first-principles | power-laws | network-effects | switching-costs | incentives | marketplaces | optionality | inversion | second-order-effects | base-rates | margin-of-safety | regret-minimization | ooda-loop | activation-energy | feedback-loops | other",
+        "status": "active",
+        "description": "[One paragraph: what this model is and what it explains]\n",
+        "core_question": "[The single question this model answers]",
+        "application_protocol": "1. \n2. \n3. \n",
+        "failure_modes": "[When does this model mislead? When should you NOT use it?]\n",
+        "complementary_models": [],
+        "contradicting_models": [],
+        "related_decisions": [],
+        "related_outcomes": [],
+        "related_lessons": [],
+        "recommended_for_entity_types": [
+          "decision",
+          "opportunity"
+        ],
+        "confidence_score": 7,
+        "importance": 7,
+        "application_count": 0,
+        "created": "<% tp.file.creation_date(\"YYYY-MM-DD\") %>",
+        "updated": "<% tp.file.last_modified_date(\"YYYY-MM-DD\") %>",
+        "owner": "Founder/CEO"
+      },
+      "metadata": {
+        "file_path": "templates/mental-model.md",
+        "completeness_score": 100,
+        "last_extracted": "2026-06-15",
+        "schema_valid": true,
+        "missing_fields": []
+      },
+      "tags": [
+        "mental-model",
+        "strategy-layer"
+      ]
+    },
+    {
+      "id": "<% tp.file.title.split(\" \u2014 \")[0] || \"GHR-YYYY-WNN\" %>",
+      "type": "graph-health-report",
+      "label": "Graph Health Report",
+      "status": "published",
+      "properties": {
+        "title": "Graph Health Report",
+        "entity_id": "<% tp.file.title.split(\" \u2014 \")[0] || \"GHR-YYYY-WNN\" %>",
+        "entity_type": "graph-health-report",
+        "status": "published",
+        "week_ending": "<% tp.date.now(\"YYYY-MM-DD\") %>",
+        "created": "<% tp.file.creation_date(\"YYYY-MM-DD\") %>",
+        "owner": "Founder/CEO"
+      },
+      "metadata": {
+        "file_path": "templates/graph-health-report.md",
+        "completeness_score": 0,
+        "last_extracted": "2026-06-15",
+        "schema_valid": true,
+        "missing_fields": []
+      },
+      "tags": [
+        "graph-health",
+        "meta-intelligence"
       ]
     },
     {
@@ -813,7 +926,7 @@
       "metadata": {
         "file_path": "04-learning/outcomes/OUT-2026-001 \u2014 zero-knowledge-mvp-release.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -844,7 +957,7 @@
       "metadata": {
         "file_path": "04-learning/lessons/LSN-2026-001 \u2014 complexity-of-zero-knowledge-ux.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -888,7 +1001,7 @@
       "metadata": {
         "file_path": "02-decisions/memos/DEC-2026-001 \u2014 build-zero-knowledge-analytics-platform.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -919,7 +1032,7 @@
       "metadata": {
         "file_path": "02-decisions/assumptions/ASM-2026-002 \u2014 zero-knowledge-performance-overhead-is-acceptable.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -951,7 +1064,7 @@
       "metadata": {
         "file_path": "02-decisions/assumptions/ASM-2026-003 \u2014 competitive-moat-via-switching-costs.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -982,7 +1095,7 @@
       "metadata": {
         "file_path": "02-decisions/assumptions/ASM-2026-001 \u2014 enterprise-willingness-to-pay-for-privacy.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -1025,7 +1138,7 @@
       "metadata": {
         "file_path": "02-decisions/scenarios/SCE-2026-005 \u2014 dec-2026-001-black-swan-systemic-cryptographical-breach.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -1068,7 +1181,7 @@
       "metadata": {
         "file_path": "02-decisions/scenarios/SCE-2026-002 \u2014 dec-2026-001-base-case-standard-execution-path.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -1111,7 +1224,7 @@
       "metadata": {
         "file_path": "02-decisions/scenarios/SCE-2026-003 \u2014 dec-2026-001-worst-case-key-assumption-failure-price-war.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -1154,7 +1267,7 @@
       "metadata": {
         "file_path": "02-decisions/scenarios/SCE-2026-001 \u2014 dec-2026-001-best-case-ideal-market-adoption.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -1197,7 +1310,7 @@
       "metadata": {
         "file_path": "02-decisions/scenarios/SCE-2026-004 \u2014 dec-2026-001-stretch-case-uncapped-enterprise-demand.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },
@@ -1230,7 +1343,7 @@
       "metadata": {
         "file_path": "02-decisions/forecasts/FRC-2026-001 \u2014 securecorp-launches-competing-product-by-q4.md",
         "completeness_score": 100,
-        "last_extracted": "2026-06-13",
+        "last_extracted": "2026-06-15",
         "schema_valid": true,
         "missing_fields": []
       },

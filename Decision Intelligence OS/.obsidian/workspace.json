@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "2015711613798b01",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "ea50b66d218183a4",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "92f2d803873af6dc",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01-intelligence/competitors/CMP-001 — securecorp.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "CMP-001 — securecorp"
+              "title": "New tab"
             }
           }
         ]
@@ -73,12 +69,23 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "2753104addaf76c9",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Notebook Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 574.5
   },
   "right": {
     "id": "4d10e16b9865f264",
@@ -174,13 +181,23 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "2541d1e79cfb2a85",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 463.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,47 +210,51 @@
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "copilot:Open Copilot Chat": false,
+      "homepage:Open homepage": false,
+      "notebook-navigator:Notebook Navigator": false,
+      "obsidian-full-calendar:Open Full Calendar": false
     }
   },
-  "active": "92f2d803873af6dc",
+  "active": "2753104addaf76c9",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2026-06-13 23.03.14.excalidraw.md",
-    "01-intelligence/competitors/CMP-001 — securecorp.md",
-    "Excalidraw",
     "06-meta-intelligence/dashboards/ceo-cockpit.md",
-    "06-meta-intelligence/ceo-user-manual.md",
-    "02-decisions/scenarios/SCE-2026-010 — dec-2026-001-black-swan-systemic-cryptographical-breach.md",
-    "02-decisions/scenarios/SCE-2026-009 — dec-2026-001-stretch-case-uncapped-enterprise-demand.md",
-    "02-decisions/scenarios/SCE-2026-008 — dec-2026-001-worst-case-key-assumption-failure-price-war.md",
-    "02-decisions/scenarios/SCE-2026-007 — dec-2026-001-base-case-standard-execution-path.md",
-    "02-decisions/scenarios/SCE-2026-006 — dec-2026-001-best-case-ideal-market-adoption.md",
-    "02-decisions/scenarios/SCE-2026-005 — dec-2026-001-black-swan-systemic-cryptographical-breach.md",
-    "02-decisions/scenarios/SCE-2026-004 — dec-2026-001-stretch-case-uncapped-enterprise-demand.md",
-    "02-decisions/scenarios/SCE-2026-003 — dec-2026-001-worst-case-key-assumption-failure-price-war.md",
-    "02-decisions/scenarios/SCE-2026-002 — dec-2026-001-base-case-standard-execution-path.md",
-    "02-decisions/scenarios/SCE-2026-001 — dec-2026-001-best-case-ideal-market-adoption.md",
-    "02-decisions/scenarios",
     "06-meta-intelligence/graph/exports/context-package-willingness-to-pay-for-privacy.md",
-    "05-strategy/mental-models/MMD-008 — second-order-effects.md",
     "06-meta-intelligence/graph/exports/lineage-DEC-2026-001.md",
+    "01-intelligence/signals/2026-world-cup-group-stage-predictions.md",
+    "templates/weekly-review.md",
+    "templates/weekly-intelligence-report.md",
+    "templates/trend.md",
+    "templates/strategic-theme.md",
+    "templates/strategic-bet.md",
+    "templates/source-note.md",
+    "templates/signal.md",
+    "templates/scenario.md",
+    "templates/risk.md",
+    "templates/resource-allocation.md",
+    "templates/quarterly-review.md",
+    "templates/outcome-review.md",
+    "templates/opportunity.md",
+    "templates/opportunity-v2.md",
+    "templates/monthly-review.md",
+    "templates/mental-model.md",
+    "templates/lesson.md",
+    "templates/kpi.md",
+    "templates/intelligence-report.md",
+    "templates/initiative.md",
+    "templates/graph-health-report.md",
+    "templates/forecast.md",
+    "templates",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "Excalidraw",
+    "02-decisions/scenarios",
     "06-meta-intelligence/graph/exports/lineage-DEC-2026-001.json",
-    "04-learning/lessons/LSN-2026-001 — complexity-of-zero-knowledge-ux.md",
-    "04-learning/outcomes/OUT-2026-001 — zero-knowledge-mvp-release.md",
     "04-learning/outcomes",
-    "03-execution/risks/RSK-2026-001 — developer-talent-shortage-for-cryptography.md",
-    "03-execution/initiatives/INI-2026-001 — zero-knowledge-mvp-development.md",
-    "02-decisions/forecasts/FRC-2026-001 — securecorp-launches-competing-product-by-q4.md",
-    "02-decisions/memos/DEC-2026-001 — build-zero-knowledge-analytics-platform.md",
-    "02-decisions/assumptions/ASM-2026-003 — competitive-moat-via-switching-costs.md",
-    "02-decisions/assumptions/ASM-2026-002 — zero-knowledge-performance-overhead-is-acceptable.md",
-    "02-decisions/assumptions/ASM-2026-001 — enterprise-willingness-to-pay-for-privacy.md",
     "06-meta-intelligence/graph/diagnostics/diagnostics.json",
     "06-meta-intelligence/graph/diagnostics",
     "06-meta-intelligence/graph/exports/nodes.json",
-    "06-meta-intelligence/graph/exports/graph-export.json",
-    "06-meta-intelligence/graph/exports/edges.json",
-    "06-meta-intelligence/graph/exports",
     "Untitled.canvas"
   ]
 }

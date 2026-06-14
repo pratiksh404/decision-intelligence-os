@@ -4,5 +4,11 @@
   "dataview",
   "metadata-menu",
   "templater-obsidian",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "copilot",
+  "homepage",
+  "obsidian-mind-map",
+  "notebook-navigator",
+  "obsidian-full-calendar",
+  "obsidian-style-settings"
 ]

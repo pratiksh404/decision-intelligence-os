@@ -1,9 +1,13 @@
 {
-  "generated_at": "2026-06-13T22:43:41.116507",
-  "graph_health_score": 96,
+  "generated_at": "2026-06-15T01:33:18.580394",
+  "graph_health_score": 90,
   "health_interpretation": "Excellent",
   "issues": {
-    "orphan_nodes": [],
+    "orphan_nodes": [
+      "SCE-YYYY-NNN",
+      "<% tp.file.title.split(\" \u2014 \")[0] %>",
+      "<% tp.file.title.split(\" \u2014 \")[0] || \"GHR-YYYY-WNN\" %>"
+    ],
     "broken_links": [],
     "duplicate_candidates": [],
     "unvalidated_critical_assumptions": [
@@ -16,6 +20,7 @@
     "schema_violations": []
   },
   "recommendations": [
+    "Connect or archive 3 orphan nodes",
     "URGENT: Validate 1 critical unvalidated assumptions"
   ]
 }

@@ -1,0 +1,447 @@
+/* Decision Intelligence OS Dashboard Styles */
+
+.di-dashboard {
+  --di-success: #10b981;
+  --di-success-bg: rgba(16, 185, 129, 0.12);
+  --di-warning: #f59e0b;
+  --di-warning-bg: rgba(245, 158, 11, 0.12);
+  --di-danger: #ef4444;
+  --di-danger-bg: rgba(239, 68, 68, 0.12);
+  --di-info: #3b82f6;
+  --di-info-bg: rgba(59, 130, 246, 0.12);
+  --di-purple: #8b5cf6;
+  --di-purple-bg: rgba(139, 92, 246, 0.12);
+  
+  font-family: var(--font-interface, inherit);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Theme adaptation */
+.theme-dark .di-dashboard {
+  --di-card-bg: rgba(30, 30, 35, 0.6);
+  --di-card-border: rgba(255, 255, 255, 0.08);
+  --di-card-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.3);
+  --di-card-hover-bg: rgba(35, 35, 42, 0.8);
+  --di-header-bg: linear-gradient(135deg, #1e1e24, #121214);
+}
+
+.theme-light .di-dashboard {
+  --di-card-bg: rgba(248, 249, 250, 0.8);
+  --di-card-border: rgba(0, 0, 0, 0.08);
+  --di-card-shadow: 0 8px 24px 0 rgba(31, 38, 135, 0.04);
+  --di-card-hover-bg: rgba(240, 242, 245, 0.9);
+  --di-header-bg: linear-gradient(135deg, #ffffff, #f1f3f5);
+}
+
+/* Header & Navigation */
+.di-header {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--di-header-bg);
+  border: 1px solid var(--di-card-border);
+  box-shadow: var(--di-card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.di-header h1 {
+  margin: 0 !important;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  background: linear-gradient(90deg, var(--text-normal), var(--text-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.di-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.di-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  background: rgba(var(--mono-rgb-200), 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--di-card-border);
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+.di-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background: transparent;
+  white-space: nowrap;
+}
+
+.di-tab:hover {
+  color: var(--text-normal);
+  background: rgba(var(--mono-rgb-200), 0.08);
+}
+
+.di-tab.is-active {
+  color: var(--text-on-accent, white);
+  background: var(--interactive-accent);
+  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.3);
+}
+
+/* Metric Cards Grid */
+.di-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.di-metric-card {
+  padding: 1.25rem;
+  border-radius: 10px;
+  background: var(--di-card-bg);
+  border: 1px solid var(--di-card-border);
+  box-shadow: var(--di-card-shadow);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.di-metric-card:hover {
+  transform: translateY(-2px);
+  background: var(--di-card-hover-bg);
+}
+
+.di-metric-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.di-metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-normal);
+  line-height: 1;
+}
+
+.di-metric-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Special Brier Metric styling */
+.di-metric-card.brier-excellent { border-left: 4px solid var(--di-success); }
+.di-metric-card.brier-good { border-left: 4px solid var(--di-info); }
+.di-metric-card.brier-moderate { border-left: 4px solid var(--di-warning); }
+.di-metric-card.brier-poor { border-left: 4px solid var(--di-danger); }
+
+/* Alert Banner */
+.di-alert-banner {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--di-danger);
+  background: var(--di-danger-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.di-alert-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--di-danger);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.di-alert-item {
+  font-size: 0.85rem;
+  margin-left: 1.25rem;
+  color: var(--text-normal);
+}
+
+.di-alert-empty {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--di-success);
+  background: var(--di-success-bg);
+  color: var(--di-success);
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Layout Panels */
+.di-panel {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--di-card-bg);
+  border: 1px solid var(--di-card-border);
+  box-shadow: var(--di-card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.di-panel-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0 !important;
+  color: var(--text-normal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--di-card-border);
+  padding-bottom: 0.5rem;
+}
+
+/* Tables styling */
+.di-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.di-table {
+  width: 100%;
+  border-collapse: collapse !important;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.di-table th {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 2px solid var(--di-card-border) !important;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.di-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--di-card-border) !important;
+  vertical-align: middle;
+}
+
+.di-table tr:hover {
+  background: rgba(var(--mono-rgb-200), 0.02);
+}
+
+/* Badges */
+.di-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+.di-badge-success { color: var(--di-success); background: var(--di-success-bg); }
+.di-badge-warning { color: var(--di-warning); background: var(--di-warning-bg); }
+.di-badge-danger { color: var(--di-danger); background: var(--di-danger-bg); }
+.di-badge-info { color: var(--di-info); background: var(--di-info-bg); }
+.di-badge-purple { color: var(--di-purple); background: var(--di-purple-bg); }
+
+/* Progress Bars */
+.di-progress-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 100px;
+}
+
+.di-progress {
+  flex-grow: 1;
+  height: 6px;
+  background: rgba(var(--mono-rgb-200), 0.1);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.di-progress-bar {
+  height: 100%;
+  background: var(--interactive-accent);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.di-progress-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 28px;
+  text-align: right;
+}
+
+/* Filter Bar controls */
+.di-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(var(--mono-rgb-200), 0.02);
+  border-radius: 8px;
+  border: 1px solid var(--di-card-border);
+}
+
+.di-filter-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.di-select {
+  padding: 0.4rem 1.8rem 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--di-card-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  cursor: pointer;
+}
+
+.di-input {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--di-card-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  min-width: 180px;
+}
+
+.di-btn {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--di-card-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
+}
+
+.di-btn:hover {
+  background: var(--di-card-hover-bg);
+  border-color: var(--text-muted);
+}
+
+.di-btn-primary {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent, white);
+  border: none;
+}
+
+.di-btn-primary:hover {
+  background: var(--interactive-accent-hover);
+  color: var(--text-on-accent, white);
+}
+
+/* Risk Heatmap styling */
+.di-risk-matrix-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.di-risk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.di-risk-cell {
+  aspect-ratio: 1.5;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--di-card-border);
+  position: relative;
+}
+
+.di-risk-cell-red { background: rgba(239, 68, 68, 0.15); color: var(--di-danger); border-color: rgba(239, 68, 68, 0.3); }
+.di-risk-cell-orange { background: rgba(245, 158, 11, 0.15); color: var(--di-warning); border-color: rgba(245, 158, 11, 0.3); }
+.di-risk-cell-green { background: rgba(16, 185, 129, 0.15); color: var(--di-success); border-color: rgba(16, 185, 129, 0.3); }
+
+.di-risk-cell-count {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.di-risk-cell-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* SVG Calibration Graph */
+.di-calibration-svg {
+  background: rgba(var(--mono-rgb-200), 0.02);
+  border-radius: 8px;
+  border: 1px solid var(--di-card-border);
+  max-width: 100%;
+}
+
+.di-calibration-point {
+  fill: var(--interactive-accent);
+  stroke: var(--background-primary);
+  stroke-width: 1.5;
+  transition: all 0.2s ease;
+}
+
+.di-calibration-point:hover {
+  r: 6px;
+  fill: var(--text-normal);
+}
+
+.di-calibration-line {
+  stroke: var(--interactive-accent);
+  stroke-width: 2px;
+  fill: none;
+}
+
+.di-calibration-diagonal {
+  stroke: var(--text-muted);
+  stroke-width: 1px;
+  stroke-dasharray: 4;
+}
+
+.di-calibration-axis {
+  stroke: var(--di-card-border);
+  stroke-width: 1px;
+}
+
+.di-calibration-text {
+  font-size: 10px;
+  fill: var(--text-muted);
+}

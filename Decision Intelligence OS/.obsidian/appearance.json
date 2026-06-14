@@ -4,6 +4,8 @@
   "textFontFamily": "FiraMono Nerd Font",
   "interfaceFontFamily": "FiraMono Nerd Font",
   "enabledCssSnippets": [
-    "word-count"
+    "word-count",
+    "dashboard",
+    "snippets"
   ]
 }

@@ -23,7 +23,7 @@ TABLE
   predicted_probability AS "Predicted %",
   deadline AS "Deadline",
   related_decision AS "Decision"
-FROM "vault/02-decisions/forecasts"
+FROM "02-decisions/forecasts"
 WHERE type = "forecast"
   AND status = "active"
   AND deadline < date(today)
@@ -40,7 +40,7 @@ TABLE
   predicted_probability AS "Predicted %",
   confidence_score AS "Confidence",
   deadline AS "Due"
-FROM "vault/02-decisions/forecasts"
+FROM "02-decisions/forecasts"
 WHERE type = "forecast"
   AND status = "active"
   AND deadline >= date(today)
@@ -60,7 +60,7 @@ TABLE
   brier_score AS "Brier Score",
   calibration_error AS "Error",
   resolution_date AS "Resolved"
-FROM "vault/02-decisions/forecasts"
+FROM "02-decisions/forecasts"
 WHERE type = "forecast"
   AND status = "resolved"
 SORT resolution_date DESC
@@ -75,7 +75,7 @@ TABLE
   rows.file.name AS "Forecasts",
   average(rows.brier_score) AS "Avg Brier Score",
   length(rows) AS "Count"
-FROM "vault/02-decisions/forecasts"
+FROM "02-decisions/forecasts"
 WHERE type = "forecast" AND status = "resolved"
 GROUP BY category
 SORT average(rows.brier_score) ASC
@@ -90,7 +90,7 @@ TABLE
   rows.file.name AS "Forecasts",
   average(rows.brier_score) AS "Avg Brier Score",
   length(rows) AS "Count"
-FROM "vault/02-decisions/forecasts"
+FROM "02-decisions/forecasts"
 WHERE type = "forecast" AND status = "resolved" AND strategic_theme != null
 GROUP BY strategic_theme
 SORT average(rows.brier_score) ASC
@@ -107,7 +107,7 @@ TABLE
   actual_probability AS "Actual",
   brier_score AS "Brier Score",
   category
-FROM "vault/02-decisions/forecasts"
+FROM "02-decisions/forecasts"
 WHERE type = "forecast" AND status = "resolved" AND brier_score > 0.15
 SORT brier_score DESC
 LIMIT 10
@@ -122,7 +122,7 @@ TABLE
   brier_score_period AS "Period",
   number_of_forecasts AS "# Forecasts",
   average_brier_score AS "Avg Brier"
-FROM "vault/04-learning/calibration"
+FROM "04-learning/calibration"
 WHERE type = "calibration"
 SORT file.ctime DESC
 LIMIT 12

@@ -1,9 +1,9 @@
 {
   "registry_version": "3.0",
   "schema": "phase-3",
-  "last_updated": "2026-06-13",
+  "last_updated": "2026-06-15",
   "description": "Central entity registry for the Decision Intelligence OS. Prevents duplicate entity creation and enables graph extraction.",
-  "total_entities": 30,
+  "total_entities": 33,
   "id_counters": {
     "SIG": {
       "2026": 3
@@ -222,6 +222,30 @@
       "file": "05-strategy/mental-models/MMD-003 \u2014 network-effects.md",
       "status": "active",
       "created": "2026-06-13"
+    },
+    "SCE-YYYY-NNN": {
+      "type": "scenario",
+      "subtype": "",
+      "title": "Scenario Title",
+      "file": "templates/scenario.md",
+      "status": "inactive",
+      "created": "YYYY-MM-DD"
+    },
+    "<% tp.file.title.split(\" \u2014 \")[0] %>": {
+      "type": "mental-model",
+      "subtype": "first-principles | power-laws | network-effects | switching-costs | incentives | marketplaces | optionality | inversion | second-order-effects | base-rates | margin-of-safety | regret-minimization | ooda-loop | activation-energy | feedback-loops | other",
+      "title": "<% tp.file.title.split(\" \u2014 \")[1] || tp.file.title %>",
+      "file": "templates/mental-model.md",
+      "status": "active",
+      "created": "<% tp.file.creation_date(\"YYYY-MM-DD\") %>"
+    },
+    "<% tp.file.title.split(\" \u2014 \")[0] || \"GHR-YYYY-WNN\" %>": {
+      "type": "graph-health-report",
+      "subtype": "",
+      "title": "Graph Health Report",
+      "file": "templates/graph-health-report.md",
+      "status": "published",
+      "created": "<% tp.file.creation_date(\"YYYY-MM-DD\") %>"
     },
     "OUT-2026-001": {
       "type": "outcome",

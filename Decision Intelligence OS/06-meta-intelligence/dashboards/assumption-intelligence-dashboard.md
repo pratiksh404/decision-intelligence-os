@@ -23,7 +23,7 @@ TABLE
   category AS "Category",
   invalidation_date AS "Invalidated",
   related_decisions AS "Linked Decisions"
-FROM "vault/02-decisions/assumptions"
+FROM "02-decisions/assumptions"
 WHERE type = "assumption" AND status = "rejected"
 SORT invalidation_date DESC
 ```
@@ -39,7 +39,7 @@ TABLE
   evidence_status AS "Evidence",
   importance AS "Importance",
   related_decisions AS "Decisions"
-FROM "vault/02-decisions/assumptions"
+FROM "02-decisions/assumptions"
 WHERE type = "assumption"
   AND status = "unvalidated"
   AND confidence_score <= 4
@@ -56,7 +56,7 @@ TABLE
   confidence_score AS "Confidence",
   invalidation_risk AS "Risk",
   length(related_decisions) AS "# Decisions"
-FROM "vault/02-decisions/assumptions"
+FROM "02-decisions/assumptions"
 WHERE type = "assumption"
   AND status != "rejected"
   AND length(related_decisions) > 1
@@ -73,7 +73,7 @@ TABLE
   review_date AS "Review Due",
   confidence_score AS "Confidence",
   status AS "Status"
-FROM "vault/02-decisions/assumptions"
+FROM "02-decisions/assumptions"
 WHERE type = "assumption"
   AND review_date < date(today)
   AND status != "rejected"
@@ -91,7 +91,7 @@ TABLE
   invalidation_risk AS "Risk Level",
   confidence_score AS "Confidence",
   evidence_status AS "Evidence"
-FROM "vault/02-decisions/assumptions"
+FROM "02-decisions/assumptions"
 WHERE type = "assumption"
   AND invalidation_risk = "high" OR invalidation_risk = "critical"
   AND status = "unvalidated"
@@ -108,7 +108,7 @@ TABLE
   category AS "Category",
   confidence_score AS "Confidence",
   updated AS "Validated"
-FROM "vault/02-decisions/assumptions"
+FROM "02-decisions/assumptions"
 WHERE type = "assumption" AND status = "validated"
 SORT updated DESC
 LIMIT 10
@@ -123,7 +123,7 @@ TABLE
   rows.file.name AS "Assumptions",
   length(rows) AS "Count",
   average(rows.confidence_score) AS "Avg Confidence"
-FROM "vault/02-decisions/assumptions"
+FROM "02-decisions/assumptions"
 WHERE type = "assumption" AND status != "rejected"
 GROUP BY category
 SORT average(rows.confidence_score) ASC
@@ -140,7 +140,7 @@ Key dependencies to review manually:
 TABLE
   title AS "Assumption",
   depends_on_assumptions AS "Depends On"
-FROM "vault/02-decisions/assumptions"
+FROM "02-decisions/assumptions"
 WHERE type = "assumption"
   AND depends_on_assumptions != null
   AND length(depends_on_assumptions) > 0
