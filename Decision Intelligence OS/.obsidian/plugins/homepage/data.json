@@ -1,23 +1,16 @@
 {
-  "version": 4,
-  "homepages": {
-    "Main Homepage": {
-      "version": "4.4.4",
-      "homepage": "06-meta-intelligence/dashboards/ceo-cockpit.md",
-      "useWorkspace": false,
-      "openOnStartup": true,
-      "openMethod": "replace-all",
-      "manualOpenMethod": "keep-all",
-      "viewMode": "reading",
-      "revertView": false,
-      "commands": [],
-      "hasRibbonIcon": true,
-      "alwaysApplySettings": false,
-      "mobileHomepage": "",
-      "useMobileHomepage": false,
-      "value": "Home",
-      "kind": "File"
-    }
-  },
-  "separateMobile": false
+  "version": "4.4.4",
+  "homepage": "06-meta-intelligence/dashboards/ceo-cockpit",
+  "useWorkspace": false,
+  "workspace": "",
+  "openOnStartup": true,
+  "openMethod": "replace-all",
+  "manualOpenMethod": "keep-all",
+  "viewMode": "reading",
+  "revertView": false,
+  "commands": [],
+  "hasRibbonIcon": true,
+  "alwaysApplySettings": false,
+  "mobileHomepage": "",
+  "useMobileHomepage": false
 }
