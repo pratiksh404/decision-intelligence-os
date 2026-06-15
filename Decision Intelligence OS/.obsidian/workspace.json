@@ -10,11 +10,17 @@
           {
             "id": "e7a7b303c61786dc",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "06-meta-intelligence/dashboards/ceo-cockpit.md",
+                "mode": "preview",
+                "source": false
+              },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "ceo-cockpit"
             }
           }
         ]
@@ -69,23 +75,12 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "2753104addaf76c9",
-            "type": "leaf",
-            "state": {
-              "type": "notebook-navigator",
-              "state": {},
-              "icon": "notebook-navigator",
-              "title": "Notebook Navigator"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 574.5
+    "width": 312.5
   },
   "right": {
     "id": "4d10e16b9865f264",
@@ -197,7 +192,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 463.5
+    "width": 463.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,12 +213,19 @@
       "obsidian-full-calendar:Open Full Calendar": false
     }
   },
-  "active": "2753104addaf76c9",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Assumption Intelligence Dashboard.md",
+    "02-decisions/README.md",
+    "01-intelligence/README.md",
+    "03-execution/README.md",
+    "05-strategy/mental-models/README.md",
+    "07-sources/README.md",
+    "08-principles/README.md",
+    "01-intelligence/signals/2026-world-cup-group-stage-predictions.md",
     "06-meta-intelligence/dashboards/ceo-cockpit.md",
     "06-meta-intelligence/graph/exports/context-package-willingness-to-pay-for-privacy.md",
     "06-meta-intelligence/graph/exports/lineage-DEC-2026-001.md",
-    "01-intelligence/signals/2026-world-cup-group-stage-predictions.md",
     "templates/weekly-review.md",
     "templates/weekly-intelligence-report.md",
     "templates/trend.md",
@@ -238,13 +241,6 @@
     "templates/opportunity.md",
     "templates/opportunity-v2.md",
     "templates/monthly-review.md",
-    "templates/mental-model.md",
-    "templates/lesson.md",
-    "templates/kpi.md",
-    "templates/intelligence-report.md",
-    "templates/initiative.md",
-    "templates/graph-health-report.md",
-    "templates/forecast.md",
     "templates",
     "copilot/copilot-custom-prompts",
     "copilot",

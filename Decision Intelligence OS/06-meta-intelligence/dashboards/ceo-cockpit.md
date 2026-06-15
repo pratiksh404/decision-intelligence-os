@@ -469,8 +469,79 @@ if (!document.getElementById(styleId)) {
       font-size: 9px;
       fill: var(--text-muted);
     }
+    
+    .di-prompt-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .di-prompt-modal {
+      background: var(--background-primary);
+      border-radius: 12px;
+      padding: 1.5rem;
+      min-width: 360px;
+      max-width: 500px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .di-prompt-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .di-prompt-input {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
+    .di-prompt-actions {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: flex-end;
+    }
   `;
   document.head.appendChild(styleEl);
+}
+
+// Custom prompt (replaces window.prompt which is often blocked in Obsidian)
+function showPrompt(message, defaultValue) {
+  return new Promise((resolve) => {
+    const overlay = mainContainer.createEl('div', { cls: 'di-prompt-overlay' });
+    overlay.innerHTML =
+      '<div class="di-prompt-modal">' +
+        '<div class="di-prompt-title">' + message + '</div>' +
+        '<input type="text" class="di-input di-prompt-input" value="' + (defaultValue || '') + '" autofocus>' +
+        '<div class="di-prompt-actions">' +
+          '<button class="di-btn" id="di-prompt-cancel">Cancel</button>' +
+          '<button class="di-btn di-btn-primary" id="di-prompt-submit">OK</button>' +
+        '</div>' +
+      '</div>';
+    
+    const input = overlay.querySelector('.di-prompt-input');
+    input.focus();
+    input.select();
+    
+    const cleanup = () => { if (overlay.isConnected) overlay.remove(); };
+    
+    overlay.querySelector('#di-prompt-submit').addEventListener('click', () => {
+      cleanup();
+      resolve(input.value);
+    });
+    overlay.querySelector('#di-prompt-cancel').addEventListener('click', () => {
+      cleanup();
+      resolve(null);
+    });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { cleanup(); resolve(input.value); }
+      if (e.key === 'Escape') { cleanup(); resolve(null); }
+    });
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) { cleanup(); resolve(null); }
+    });
+  });
 }
 
 // Global renderer function
@@ -703,24 +774,9 @@ async function render() {
       <button class="di-btn" id="btn-new-opp">🏆 Add Opportunity</button>
     `;
     
-    // Add filter events
-    filters.querySelector('.sig-search-input').addEventListener('input', (e) => {
-      state.signalSearch = e.target.value;
-      updateIntelGrid();
-    });
-    filters.querySelector('.opp-status-select').addEventListener('change', (e) => {
-      state.opportunityFilter = e.target.value;
-      render();
-    });
-    filters.querySelector('#btn-new-signal').addEventListener('click', () => {
-      createEntity('01-intelligence/signals', 'SIG', 'Market Signal', 'signal.md');
-    });
-    filters.querySelector('#btn-new-opp').addEventListener('click', () => {
-      createEntity('01-intelligence/opportunities', 'OPP', 'Strategic Opportunity', 'opportunity-v2.md');
-    });
-    
     const intelGrid = contentEl.createEl('div');
     
+    // Define updateIntelGrid first so event handlers can reference it
     const updateIntelGrid = () => {
       intelGrid.innerHTML = '';
       
@@ -847,6 +903,28 @@ async function render() {
       `;
     };
     
+    // Add filter events (after updateIntelGrid is defined)
+    filters.querySelector('.sig-search-input').addEventListener('input', (e) => {
+      try {
+        state.signalSearch = e.target.value;
+        updateIntelGrid();
+      } catch (err) { console.error('Signal search error', err); }
+    });
+    filters.querySelector('.opp-status-select').addEventListener('change', (e) => {
+      try {
+        state.opportunityFilter = e.target.value;
+        render();
+      } catch (err) { console.error('Opp filter error', err); }
+    });
+    filters.querySelector('#btn-new-signal').addEventListener('click', async () => {
+      try { await createEntity('01-intelligence/signals', 'SIG', 'Market Signal', 'signal.md'); }
+      catch (err) { console.error('Signal creation error', err); }
+    });
+    filters.querySelector('#btn-new-opp').addEventListener('click', async () => {
+      try { await createEntity('01-intelligence/opportunities', 'OPP', 'Strategic Opportunity', 'opportunity-v2.md'); }
+      catch (err) { console.error('Opp creation error', err); }
+    });
+    
     updateIntelGrid();
   }
   
@@ -860,14 +938,17 @@ async function render() {
       <button class="di-btn" id="btn-new-assumption">🧩 Register Assumption</button>
     `;
     
-    filters.querySelector('#btn-new-dec').addEventListener('click', () => {
-      createEntity('02-decisions/memos', 'DEC', 'Decision Memo', 'decision-memo.md');
+    filters.querySelector('#btn-new-dec').addEventListener('click', async () => {
+      try { await createEntity('02-decisions/memos', 'DEC', 'Decision Memo', 'decision-memo.md'); }
+      catch (err) { console.error('Memo creation error', err); }
     });
-    filters.querySelector('#btn-new-forecast').addEventListener('click', () => {
-      createEntity('02-decisions/forecasts', 'FRC', 'Forecast Question', 'forecast-v2.md');
+    filters.querySelector('#btn-new-forecast').addEventListener('click', async () => {
+      try { await createEntity('02-decisions/forecasts', 'FRC', 'Forecast Question', 'forecast-v2.md'); }
+      catch (err) { console.error('Forecast creation error', err); }
     });
-    filters.querySelector('#btn-new-assumption').addEventListener('click', () => {
-      createEntity('02-decisions/assumptions', 'ASM', 'Hypothesis Statement', 'assumption-v2.md');
+    filters.querySelector('#btn-new-assumption').addEventListener('click', async () => {
+      try { await createEntity('02-decisions/assumptions', 'ASM', 'Hypothesis Statement', 'assumption-v2.md'); }
+      catch (err) { console.error('Assumption creation error', err); }
     });
     
     const layout = contentEl.createEl('div', { style: 'display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;' });
@@ -935,8 +1016,10 @@ async function render() {
     
     forePanel.querySelectorAll('.btn-resolve').forEach(btn => {
       btn.addEventListener('click', async () => {
-        const path = btn.getAttribute('data-path');
-        await resolveForecast(path);
+        try {
+          const path = btn.getAttribute('data-path');
+          await resolveForecast(path);
+        } catch (err) { console.error('Forecast resolution error', err); }
       });
     });
     
@@ -985,14 +1068,17 @@ async function render() {
       <button class="di-btn" id="btn-new-risk">🚨 Flag Risk</button>
     `;
     
-    filters.querySelector('#btn-new-ini').addEventListener('click', () => {
-      createEntity('03-execution/initiatives', 'INI', 'Initiative Name', 'initiative.md');
+    filters.querySelector('#btn-new-ini').addEventListener('click', async () => {
+      try { await createEntity('03-execution/initiatives', 'INI', 'Initiative Name', 'initiative.md'); }
+      catch (err) { console.error('Initiative creation error', err); }
     });
-    filters.querySelector('#btn-new-kpi').addEventListener('click', () => {
-      createEntity('03-execution/kpis', 'KPI', 'KPI Target', 'kpi.md');
+    filters.querySelector('#btn-new-kpi').addEventListener('click', async () => {
+      try { await createEntity('03-execution/kpis', 'KPI', 'KPI Target', 'kpi.md'); }
+      catch (err) { console.error('KPI creation error', err); }
     });
-    filters.querySelector('#btn-new-risk').addEventListener('click', () => {
-      createEntity('03-execution/risks', 'RSK', 'Risk Threat', 'risk.md');
+    filters.querySelector('#btn-new-risk').addEventListener('click', async () => {
+      try { await createEntity('03-execution/risks', 'RSK', 'Risk Threat', 'risk.md'); }
+      catch (err) { console.error('Risk creation error', err); }
     });
     
     const layout = contentEl.createEl('div', { style: 'display:grid; grid-template-columns: 1.1fr 0.9fr; gap:1.5rem;' });
@@ -1137,11 +1223,13 @@ async function render() {
       <button class="di-btn" id="btn-new-lesson">💡 Extract Lesson</button>
     `;
     
-    filters.querySelector('#btn-new-review').addEventListener('click', () => {
-      createEntity('04-learning/outcome-reviews', 'REV', 'Outcome Review', 'outcome-review.md');
+    filters.querySelector('#btn-new-review').addEventListener('click', async () => {
+      try { await createEntity('04-learning/outcome-reviews', 'REV', 'Outcome Review', 'outcome-review.md'); }
+      catch (err) { console.error('Review creation error', err); }
     });
-    filters.querySelector('#btn-new-lesson').addEventListener('click', () => {
-      createEntity('04-learning/lessons', 'LSN', 'Lesson Learned', 'lesson.md');
+    filters.querySelector('#btn-new-lesson').addEventListener('click', async () => {
+      try { await createEntity('04-learning/lessons', 'LSN', 'Lesson Learned', 'lesson.md'); }
+      catch (err) { console.error('Lesson creation error', err); }
     });
     
     const layout = contentEl.createEl('div', { style: 'display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;' });
@@ -1358,27 +1446,30 @@ async function render() {
 async function resolveForecast(filePath) {
   const file = app.vault.getAbstractFileByPath(filePath);
   if (!file) {
-    alert("Could not load forecast note: " + filePath);
+    new Notice("Could not load forecast note: " + filePath);
     return;
   }
   
   const content = await app.vault.read(file);
-  const outcomeDesc = prompt("Describe the actual outcome that occurred:");
-  if (outcomeDesc === null) return;
+  const outcomeDesc = await showPrompt("Describe the actual outcome that occurred:");
+  if (!outcomeDesc || outcomeDesc.trim() === '') {
+    new Notice("Resolution cancelled.");
+    return;
+  }
   
-  const outcomeProb = prompt("Set actual outcome probability (1 = Occurred, 0 = Did not occur):", "1");
+  const outcomeProb = await showPrompt("Set actual outcome probability (1 = Occurred, 0 = Did not occur):", "1");
   if (outcomeProb === null) return;
   
   const actualProb = parseFloat(outcomeProb);
   if (actualProb !== 0 && actualProb !== 1) {
-    alert("Probability must be 0 or 1!");
+    new Notice("Probability must be 0 or 1!");
     return;
   }
   
   // Extract predicted probability
   const predMatch = content.match(/predicted_probability:\s*([\d.]+)/);
   if (!predMatch) {
-    alert("Could not find predicted_probability in forecast note!");
+    new Notice("Could not find predicted_probability in forecast note!");
     return;
   }
   const predicted = parseFloat(predMatch[1]);
@@ -1411,10 +1502,11 @@ async function resolveForecast(filePath) {
   
   try {
     await app.vault.modify(file, newContent);
-    alert("Forecast successfully resolved!");
+    new Notice("✅ Forecast resolved — Brier: " + brier.toFixed(4));
     render();
   } catch (e) {
-    alert("Error modifying forecast note: " + e.message);
+    console.error("Error saving forecast", e);
+    new Notice("❌ Error modifying forecast note: " + e.message);
   }
 }
 
@@ -1468,10 +1560,14 @@ function updateFrontmatter(content, updates) {
 
 // Create Note Helper
 async function createEntity(folder, prefix, defaultName, templateName) {
-  const title = prompt(`Enter title for the new ${prefix}:`, defaultName);
-  if (!title) return;
+  const title = await showPrompt(`Enter title for the new ${prefix}:`, defaultName);
+  if (!title || title.trim() === '') {
+    new Notice("Cancelled — no title entered.");
+    return;
+  }
+  title = title.trim();
   
-  const formattedTitle = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const formattedTitle = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   
   const files = app.vault.getMarkdownFiles().filter(f => f.path.startsWith(folder + "/"));
   let nextId = 1;
@@ -1498,14 +1594,17 @@ async function createEntity(folder, prefix, defaultName, templateName) {
     }
   } catch (e) {
     console.error("Template read error", e);
+    new Notice("Template read failed — using fallback.");
     content = `---\nentity_id: ${idString}\nentity_type: ${prefix.toLowerCase()}\ntitle: "${title}"\ncreated: ${new Date().toISOString().split('T')[0]}\n---\n# ${title}\n`;
   }
   
   try {
     const newFile = await app.vault.create(filename, content);
     await app.workspace.getLeaf().openFile(newFile);
+    new Notice(`✅ Created: ${idString}`);
   } catch (e) {
-    alert("Error creating note: " + e.message);
+    console.error("File creation error", e);
+    new Notice("❌ Error creating note: " + e.message);
   }
 }
 

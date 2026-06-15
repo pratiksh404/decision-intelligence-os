@@ -1,16 +1,33 @@
 {
-  "version": "4.4.4",
-  "homepage": "06-meta-intelligence/dashboards/ceo-cockpit",
-  "useWorkspace": false,
-  "workspace": "",
-  "openOnStartup": true,
-  "openMethod": "replace-all",
-  "manualOpenMethod": "keep-all",
-  "viewMode": "reading",
-  "revertView": false,
-  "commands": [],
-  "hasRibbonIcon": true,
-  "alwaysApplySettings": false,
-  "mobileHomepage": "",
-  "useMobileHomepage": false
+  "version": 4,
+  "homepages": {
+    "Main Homepage": {
+      "value": "06-meta-intelligence/dashboards/ceo-cockpit",
+      "kind": "File",
+      "openOnStartup": true,
+      "openMode": "Replace all open notes",
+      "manualOpenMode": "Keep open notes",
+      "view": "Reading view",
+      "revertView": false,
+      "openWhenEmpty": false,
+      "refreshDataview": true,
+      "autoCreate": false,
+      "autoScroll": false,
+      "pin": true,
+      "commands": [],
+      "alwaysApply": false,
+      "hideReleaseNotes": false,
+      "version": "4.4.4",
+      "homepage": "06-meta-intelligence/dashboards/ceo-cockpit",
+      "useWorkspace": false,
+      "openMethod": "replace-all",
+      "manualOpenMethod": "keep-all",
+      "viewMode": "reading",
+      "hasRibbonIcon": true,
+      "alwaysApplySettings": false,
+      "mobileHomepage": "",
+      "useMobileHomepage": false
+    }
+  },
+  "separateMobile": false
 }

@@ -78,6 +78,10 @@
    1. SYSTEM TOKENS & DESIGN PRIMITIVES
    ========================================== */
 :root {
+  /* Layout: Maximize Real Estate */
+  --file-line-width: 92% !important; /* Dynamic width for dense data */
+  --max-width: 1400px; /* Upper bound for ultra-wide monitors */
+  
   /* Fluid Spacing Scale */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
