@@ -22,8 +22,37 @@
               "icon": "lucide-file",
               "title": "ceo-cockpit"
             }
+          },
+          {
+            "id": "c058c770de10290c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01-intelligence/signals/2026-world-cup-group-stage-predictions.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-world-cup-group-stage-predictions"
+            }
+          },
+          {
+            "id": "99126e178d229582",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02-decisions/forecasts/2026-06-16-world-cup-bet-slip.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-16-world-cup-bet-slip"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -80,7 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5
+    "width": 490.5
   },
   "right": {
     "id": "4d10e16b9865f264",
@@ -208,13 +237,18 @@
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "copilot:Open Copilot Chat": false,
-      "homepage:Open homepage": false,
-      "notebook-navigator:Notebook Navigator": false,
-      "obsidian-full-calendar:Open Full Calendar": false
+      "homepage:Open homepage": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "99126e178d229582",
   "lastOpenFiles": [
+    "02-decisions/forecasts/2026-06-15-world-cup-bet-slip.md",
+    "02-decisions/forecasts/2026-06-16-world-cup-bet-slip.md",
+    "06-meta-intelligence/dashboards/ceo-cockpit.md",
+    "01-intelligence/signals/2026-world-cup-group-stage-predictions.md",
+    "02-decisions/forecasts/FRC-2026-001 — securecorp-launches-competing-product-by-q4.md",
+    "02-decisions/forecasts/2026-06-17-world-cup-bet-slip.md",
+    "05-strategy/bets/world-cup-2026-group-stage-strategy.md",
     "Assumption Intelligence Dashboard.md",
     "02-decisions/README.md",
     "01-intelligence/README.md",
@@ -222,8 +256,6 @@
     "05-strategy/mental-models/README.md",
     "07-sources/README.md",
     "08-principles/README.md",
-    "01-intelligence/signals/2026-world-cup-group-stage-predictions.md",
-    "06-meta-intelligence/dashboards/ceo-cockpit.md",
     "06-meta-intelligence/graph/exports/context-package-willingness-to-pay-for-privacy.md",
     "06-meta-intelligence/graph/exports/lineage-DEC-2026-001.md",
     "templates/weekly-review.md",
@@ -236,11 +268,6 @@
     "templates/scenario.md",
     "templates/risk.md",
     "templates/resource-allocation.md",
-    "templates/quarterly-review.md",
-    "templates/outcome-review.md",
-    "templates/opportunity.md",
-    "templates/opportunity-v2.md",
-    "templates/monthly-review.md",
     "templates",
     "copilot/copilot-custom-prompts",
     "copilot",
